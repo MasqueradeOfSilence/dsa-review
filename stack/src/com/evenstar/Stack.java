@@ -17,6 +17,14 @@ public class Stack
         elements.add(item);
     }
 
+    public void pop()
+    {
+        if (elements.size() > 0)
+        {
+            elements.remove(0);
+        }
+    }
+
     public int getSize()
     {
         return elements.size();

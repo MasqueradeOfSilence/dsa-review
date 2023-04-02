@@ -9,7 +9,7 @@ class StackTest
     Stack stack = new Stack();
 
     @Test
-    public void TestPushShouldAddANewElementToTheStack()
+    public void testPushShouldAddANewElementToTheStack()
     {
         int initialSize = stack.getSize();
         assertEquals(initialSize, 0);
@@ -18,5 +18,16 @@ class StackTest
         int finalSize = stack.getSize();
         assertEquals(finalSize, 1);
         assertEquals(stack.at(0), 1);
+    }
+
+    @Test
+    public void testPopShouldRemoveAnElementFromTheStack()
+    {
+        stack = new Stack();
+        int pancake = 1;
+        stack.push(pancake);
+        stack.pop();
+        int finalSize = stack.getSize();
+        assertEquals(finalSize, 0);
     }
 }
