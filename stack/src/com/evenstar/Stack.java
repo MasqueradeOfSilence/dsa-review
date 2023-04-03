@@ -21,8 +21,13 @@ public class Stack
     {
         if (elements.size() > 0)
         {
-            elements.remove(0);
+            elements.remove(elements.size() - 1);
         }
+    }
+
+    public int peek()
+    {
+        return elements.get(elements.size() - 1);
     }
 
     public int getSize()

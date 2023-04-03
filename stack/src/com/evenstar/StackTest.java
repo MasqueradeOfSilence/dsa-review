@@ -30,4 +30,16 @@ class StackTest
         int finalSize = stack.getSize();
         assertEquals(finalSize, 0);
     }
+
+    @Test
+    public void testPeekShouldShowUsTheTopElementOfTheStack()
+    {
+        stack = new Stack();
+        int pancake = 6;
+        int anotherPancake = 5;
+        stack.push(pancake);
+        stack.push(anotherPancake);
+        int top = stack.peek();
+        assertEquals(top, anotherPancake);
+    }
 }
