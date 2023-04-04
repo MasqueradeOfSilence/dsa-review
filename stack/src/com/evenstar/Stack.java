@@ -39,4 +39,9 @@ public class Stack
     {
         return elements.get(where);
     }
+
+    public boolean isEmpty()
+    {
+        return elements.size() == 0;
+    }
 }

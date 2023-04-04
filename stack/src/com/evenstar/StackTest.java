@@ -42,4 +42,16 @@ class StackTest
         int top = stack.peek();
         assertEquals(top, anotherPancake);
     }
+
+    @Test
+    public void testIsEmptyShouldInformUsIfTheStackIsEmpty()
+    {
+        stack = new Stack();
+        boolean isEmpty = stack.isEmpty();
+        assertTrue(isEmpty);
+        int pancake = 3;
+        stack.push(pancake);
+        boolean isEmptyAfterInserting = stack.isEmpty();
+        assertFalse(isEmptyAfterInserting);
+    }
 }
