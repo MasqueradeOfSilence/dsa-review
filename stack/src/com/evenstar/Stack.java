@@ -1,6 +1,7 @@
 package com.evenstar;
 
 import java.util.ArrayList;
+import java.util.Collections;
 
 /**
  * Stack elements: Push, Pop, Size, IsEmpty, Print
@@ -10,7 +11,18 @@ import java.util.ArrayList;
 
 public class Stack
 {
+    private int MAX = Integer.MAX_VALUE;
     ArrayList<Integer> elements = new ArrayList<>();
+
+    public Stack()
+    {
+
+    }
+
+    public Stack(int max)
+    {
+        this.MAX = max;
+    }
 
     public void push(int item)
     {
@@ -43,5 +55,13 @@ public class Stack
     public boolean isEmpty()
     {
         return elements.size() == 0;
+    }
+
+    public void print()
+    {
+        // shallow copy so we don't mess with access of the original
+        ArrayList<Integer> elementsCopy = new ArrayList<>(elements);
+        Collections.reverse(elementsCopy);
+        System.out.println(elementsCopy.toString());
     }
 }

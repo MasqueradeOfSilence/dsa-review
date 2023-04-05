@@ -54,4 +54,16 @@ class StackTest
         boolean isEmptyAfterInserting = stack.isEmpty();
         assertFalse(isEmptyAfterInserting);
     }
+
+    @Test
+    public void testToStringShouldPrintTheStack()
+    {
+        stack = new Stack();
+        int pancake = 6;
+        int anotherPancake = 5;
+        stack.push(pancake);
+        stack.push(anotherPancake);
+        // expecting 5, 6
+        stack.print();
+    }
 }
