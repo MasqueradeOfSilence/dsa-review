@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 
 /**
- * Stack elements: Push, Pop, Size, IsEmpty, Print
+ * Stack elements: Push, Pop, Size, IsEmpty, IsFull, Print
  * We are making a stack of ints
  * Stack = LIFO
  */
@@ -26,6 +26,11 @@ public class Stack
 
     public void push(int item)
     {
+        if (this.isFull())
+        {
+            System.out.println("Stack is full. Cannot add anything else!");
+            return;
+        }
         elements.add(item);
     }
 
@@ -55,6 +60,11 @@ public class Stack
     public boolean isEmpty()
     {
         return elements.size() == 0;
+    }
+
+    public boolean isFull()
+    {
+        return elements.size() >= MAX;
     }
 
     public void print()

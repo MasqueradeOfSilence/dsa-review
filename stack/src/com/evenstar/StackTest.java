@@ -63,7 +63,21 @@ class StackTest
         int anotherPancake = 5;
         stack.push(pancake);
         stack.push(anotherPancake);
-        // expecting 5, 6
+        // expecting 5, 6. Not mocking the print right now, just visually examining.
         stack.print();
+    }
+
+    @Test
+    public void testIsFullShouldInformUsIfTheStackIsFull()
+    {
+        stack = new Stack(2);
+        boolean isFull = stack.isFull();
+        assertFalse(isFull);
+        int pancake = 6;
+        int anotherPancake = 5;
+        stack.push(pancake);
+        stack.push(anotherPancake);
+        isFull = stack.isFull();
+        assertTrue(isFull);
     }
 }
