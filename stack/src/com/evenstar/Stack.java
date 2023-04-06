@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 
 /**
- * Stack elements: Push, Pop, Size, IsEmpty, IsFull, Print
+ * Stack elements: Push, Pop, Size, IsEmpty, IsFull, Print, Peek
  * We are making a stack of ints
  * Stack = LIFO
  */
