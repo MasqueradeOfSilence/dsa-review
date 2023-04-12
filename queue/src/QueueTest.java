@@ -17,4 +17,25 @@ class QueueTest
         int frontOfLine = queue.peek();
         assertEquals(5, frontOfLine);
     }
+
+    @Test
+    public void testDequeueShouldRemoveTheFrontElement()
+    {
+        Queue queue = new Queue();
+        queue.enqueue(5);
+        queue.enqueue(6);
+        queue.enqueue(7);
+        queue.dequeue();
+        int frontOfLine = queue.peek();
+        assertEquals(6, frontOfLine);
+    }
+
+    @Test
+    public void testIsEmptyShouldAscertainIfTheQueueIsEmpty()
+    {
+        Queue queue = new Queue();
+        assertTrue(queue.isEmpty());
+        queue.enqueue(71);
+        assertFalse(queue.isEmpty());
+    }
 }

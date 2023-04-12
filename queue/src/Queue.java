@@ -9,6 +9,16 @@ public class Queue
         elements.add(value);
     }
 
+    public void dequeue()
+    {
+        elements.remove(0);
+    }
+
+    public boolean isEmpty()
+    {
+        return elements.isEmpty();
+    }
+
     public int peek()
     {
         return elements.get(0);
