@@ -3,7 +3,7 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 /*
-    Enqueue, dequeue, isFull, isEmpty, peek
+    Enqueue, dequeue, isFull, isEmpty, peek, optionally toString
 */
 class QueueTest
 {
@@ -37,5 +37,14 @@ class QueueTest
         assertTrue(queue.isEmpty());
         queue.enqueue(71);
         assertFalse(queue.isEmpty());
+    }
+
+    @Test
+    public void testIsFullShouldAscertainIfTheQueueIsFull()
+    {
+        Queue queue = new Queue(1);
+        assertFalse(queue.isFull());
+        queue.enqueue(333);
+        assertTrue(queue.isFull());
     }
 }
