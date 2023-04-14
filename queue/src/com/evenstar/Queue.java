@@ -1,3 +1,5 @@
+package com.evenstar;
+
 import java.util.ArrayList;
 
 public class Queue
@@ -29,10 +31,19 @@ public class Queue
 
     public void dequeue()
     {
-        if (!isFull())
+        if (elements.size() <= MAX)
         {
             elements.remove(0);
         }
+    }
+
+    @Override
+    public String toString()
+    {
+        return "com.evenstar.Queue{" +
+                "elements=" + elements +
+                ", MAX=" + MAX +
+                '}';
     }
 
     public boolean isEmpty()
