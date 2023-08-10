@@ -7,7 +7,7 @@ package com.evenstar;
 public class Main
 {
     private static PriorityQueue priorityQueue;
-    
+
     public static void main(String[] args)
     {
         System.out.println("Hello priority queue!");
