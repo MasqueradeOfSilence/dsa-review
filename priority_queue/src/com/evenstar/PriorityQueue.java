@@ -4,5 +4,6 @@ package com.evenstar;
 // https://stackoverflow.com/questions/26440623/package-name-does-not-correspond-to-the-file-path-intellij
 public class PriorityQueue
 {
-
+    // The max heap data member should not need to be exposed to other classes at any point.
+    private com.evenstar.MaxHeap maxHeap;
 }

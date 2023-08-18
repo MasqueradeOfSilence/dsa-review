@@ -6,11 +6,11 @@ package com.evenstar;
 
 public class Main
 {
-    private static PriorityQueue priorityQueue;
-
+    // I guess Java has one of the same name...
+    private static com.evenstar.PriorityQueue priorityQueue;
     public static void main(String[] args)
     {
         System.out.println("Hello priority queue!");
-        priorityQueue = new PriorityQueue();
+        priorityQueue = new com.evenstar.PriorityQueue();
     }
 }
