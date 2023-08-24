@@ -6,7 +6,7 @@ package com.evenstar;
 
 public class Main
 {
-    // I guess Java has one of the same name...
+    // Java also has a Priority Queue, so we are specifying our local one.
     private static com.evenstar.PriorityQueue priorityQueue;
     public static void main(String[] args)
     {
