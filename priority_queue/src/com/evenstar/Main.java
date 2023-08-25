@@ -1,5 +1,7 @@
 package com.evenstar;
 
+import java.util.ArrayList;
+
 /**
  * Heapify reference: https://builtin.com/software-engineering-perspectives/heapify-heap-tree-cpp
  */
@@ -11,6 +13,7 @@ public class Main
     public static void main(String[] args)
     {
         System.out.println("Hello priority queue!");
-        priorityQueue = new com.evenstar.PriorityQueue();
+        ArrayList<Integer> nodeValues = new ArrayList<>();
+        priorityQueue = new com.evenstar.PriorityQueue(nodeValues);
     }
 }
