@@ -26,5 +26,6 @@ class PriorityQueueTest
         nodes.add(24);
         nodes.add(29);
         PriorityQueue priorityQueue = new PriorityQueue(nodes);
+        priorityQueue.heapify();
     }
 }
