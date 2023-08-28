@@ -10,8 +10,7 @@ import static org.junit.jupiter.api.Assertions.*;
 */
 class PriorityQueueTest
 {
-    @Test
-    public void testHeapifyShouldCorrectlyHeapifyTheMaxHeap()
+    private ArrayList<Integer> constructNodeArray()
     {
         ArrayList<Integer> nodes = new ArrayList<>();
         nodes.add(3);
@@ -25,6 +24,21 @@ class PriorityQueueTest
         nodes.add(22);
         nodes.add(24);
         nodes.add(29);
+        return nodes;
+    }
+
+    @Test
+    public void testFindLastNonLeafNodeInTreeShouldReturnTheLowestRightmostNodeThatHasChildren()
+    {
+        int expectedNodeValue = 17;
+        ArrayList<Integer> nodes = constructNodeArray();
+        PriorityQueue priorityQueue = new PriorityQueue(nodes);
+    }
+
+    @Test
+    public void testHeapifyShouldCorrectlyHeapifyTheMaxHeap()
+    {
+        ArrayList<Integer> nodes = constructNodeArray();
         PriorityQueue priorityQueue = new PriorityQueue(nodes);
         priorityQueue.heapify();
     }
