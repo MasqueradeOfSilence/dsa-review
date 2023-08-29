@@ -41,5 +41,6 @@ class PriorityQueueTest
         ArrayList<Integer> nodes = constructNodeArray();
         PriorityQueue priorityQueue = new PriorityQueue(nodes);
         priorityQueue.heapify();
+        ArrayList<Integer> finalNodes = priorityQueue.getNodes();
     }
 }
