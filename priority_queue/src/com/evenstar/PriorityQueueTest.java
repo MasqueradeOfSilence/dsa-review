@@ -43,5 +43,9 @@ class PriorityQueueTest
         priorityQueue.heapify();
         ArrayList<Integer> finalNodes = priorityQueue.getNodes();
         // heapified: 29, 24, 13, 22, 17, 11, 8, 19, 10, 5, 3
+        assertEquals(finalNodes.get(0), 29);
+        assertEquals(finalNodes.get(1), 24);
+        assertEquals(finalNodes.get(2), 13);
+        assertEquals(finalNodes.get(3), 22);
     }
 }
