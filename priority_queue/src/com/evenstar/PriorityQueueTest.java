@@ -51,5 +51,6 @@ class PriorityQueueTest
         assertEquals(finalNodes.get(5), 11);
         assertEquals(finalNodes.get(6), 8);
         assertEquals(finalNodes.get(7), 19);
+        assertEquals(finalNodes.get(8), 10);
     }
 }
