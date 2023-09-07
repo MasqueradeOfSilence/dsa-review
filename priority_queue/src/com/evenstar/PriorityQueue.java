@@ -20,6 +20,11 @@ public class PriorityQueue
 
     }
 
+    public int findLastNonLeafNodeInTree()
+    {
+        return -1;
+    }
+
     public ArrayList<Integer> getNodes()
     {
         return null;

@@ -33,6 +33,8 @@ class PriorityQueueTest
         int expectedNodeValue = 17;
         ArrayList<Integer> nodes = constructNodeArray();
         PriorityQueue priorityQueue = new PriorityQueue(nodes);
+        int lastNodeValue = priorityQueue.findLastNonLeafNodeInTree();
+        assertEquals(expectedNodeValue, lastNodeValue);
     }
 
     @Test
