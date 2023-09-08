@@ -27,6 +27,6 @@ public class PriorityQueue
 
     public ArrayList<Integer> getNodes()
     {
-        return null;
+        return maxHeap.getNodes();
     }
 }
