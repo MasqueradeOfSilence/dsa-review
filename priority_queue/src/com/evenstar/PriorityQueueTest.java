@@ -1,5 +1,6 @@
 import com.evenstar.PriorityQueue;
 import org.junit.Test;
+import org.junit.jupiter.api.BeforeEach;
 
 import java.util.ArrayList;
 
@@ -10,6 +11,7 @@ import static org.junit.jupiter.api.Assertions.*;
 */
 class PriorityQueueTest
 {
+    private PriorityQueue priorityQueue;
     private ArrayList<Integer> constructNodeArray()
     {
         ArrayList<Integer> nodes = new ArrayList<>();
@@ -27,12 +29,18 @@ class PriorityQueueTest
         return nodes;
     }
 
+    @BeforeEach
+    private void createPriorityQueue()
+    {
+        ArrayList<Integer> nodes = constructNodeArray();
+        PriorityQueue priorityQueue = new PriorityQueue(nodes);
+        this.priorityQueue = priorityQueue;
+    }
+
     @Test
     public void testFindLastNonLeafNodeInTreeShouldReturnTheLowestRightmostNodeThatHasChildren()
     {
         int expectedNodeValue = 17;
-        ArrayList<Integer> nodes = constructNodeArray();
-        PriorityQueue priorityQueue = new PriorityQueue(nodes);
         int lastNodeValue = priorityQueue.findLastNonLeafNodeInTree();
         assertEquals(expectedNodeValue, lastNodeValue);
     }
@@ -40,8 +48,6 @@ class PriorityQueueTest
     @Test
     public void testHeapifyShouldCorrectlyHeapifyTheMaxHeap()
     {
-        ArrayList<Integer> nodes = constructNodeArray();
-        PriorityQueue priorityQueue = new PriorityQueue(nodes);
         priorityQueue.heapify();
         ArrayList<Integer> finalNodes = priorityQueue.getNodes();
         int expectedSize = 10;
