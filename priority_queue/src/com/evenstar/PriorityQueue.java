@@ -22,7 +22,13 @@ public class PriorityQueue
 
     public int findLastNonLeafNodeInTree()
     {
-        return -1;
+        double numNodes = getNumNodes();
+        return (int) Math.floor((numNodes / 2) - 1);
+    }
+
+    public int getNumNodes()
+    {
+        return maxHeap.getNodes().size();
     }
 
     public ArrayList<Integer> getNodes()

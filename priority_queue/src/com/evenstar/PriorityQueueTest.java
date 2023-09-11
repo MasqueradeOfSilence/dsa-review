@@ -33,8 +33,7 @@ class PriorityQueueTest
     private void createPriorityQueue()
     {
         ArrayList<Integer> nodes = constructNodeArray();
-        PriorityQueue priorityQueue = new PriorityQueue(nodes);
-        this.priorityQueue = priorityQueue;
+        this.priorityQueue = new PriorityQueue(nodes);
     }
 
     @Test
