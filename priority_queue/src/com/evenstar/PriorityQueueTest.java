@@ -64,4 +64,10 @@ class PriorityQueueTest
         assertEquals(finalNodes.get(10), 3);
         assertEquals(finalNodes.size(), expectedSize);
     }
+
+    @Test
+    public void testFindLeftChildShouldFindTheLeftChildOfTheGivenNode()
+    {
+        
+    }
 }
