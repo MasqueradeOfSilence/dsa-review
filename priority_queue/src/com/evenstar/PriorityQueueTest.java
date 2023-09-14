@@ -1,6 +1,6 @@
 import com.evenstar.PriorityQueue;
-import org.junit.Test;
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
 
@@ -30,7 +30,7 @@ class PriorityQueueTest
     }
 
     @BeforeEach
-    private void createPriorityQueue()
+    public void createPriorityQueue()
     {
         ArrayList<Integer> nodes = constructNodeArray();
         this.priorityQueue = new PriorityQueue(nodes);

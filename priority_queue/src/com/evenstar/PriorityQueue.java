@@ -12,7 +12,7 @@ public class PriorityQueue
 
     public PriorityQueue(ArrayList<Integer> nodeValues)
     {
-
+        maxHeap = new com.evenstar.MaxHeap(nodeValues);
     }
 
     public void heapify()
