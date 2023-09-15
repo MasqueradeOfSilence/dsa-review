@@ -68,6 +68,6 @@ class PriorityQueueTest
     @Test
     public void testFindLeftChildShouldFindTheLeftChildOfTheGivenNode()
     {
-        
+        // Left child = 2 * index - 1
     }
 }
