@@ -69,5 +69,6 @@ class PriorityQueueTest
     public void testFindLeftChildShouldFindTheLeftChildOfTheGivenNode()
     {
         // Left child = 2 * index - 1
+        int firstLeftChild = priorityQueue.findLeftChild(0);
     }
 }
