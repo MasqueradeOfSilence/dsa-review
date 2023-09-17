@@ -70,5 +70,6 @@ class PriorityQueueTest
     {
         // Left child = 2 * index - 1
         int firstLeftChild = priorityQueue.findLeftChild(0);
+        // Left child index of node 17 (NOTE: NOT NUMBER) should be 24 (index 9)
     }
 }
