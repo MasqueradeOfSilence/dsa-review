@@ -69,7 +69,9 @@ class PriorityQueueTest
     public void testFindLeftChildShouldFindTheLeftChildOfTheGivenNode()
     {
         // Left child = 2 * index - 1
-        int firstLeftChild = priorityQueue.findLeftChild(4); // The number at index 4 will be 17
-        // Left child index of node 17 (NOTE: NOT NUMBER) should be 24 (index 9)
+        // Index = 4, value = 17
+        int firstLeftChildIndex = priorityQueue.findLeftChild(4);
+        // Index = 9, value = 24
+        assertEquals(firstLeftChildIndex, 9);
     }
 }
