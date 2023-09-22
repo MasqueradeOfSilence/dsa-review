@@ -1,4 +1,5 @@
 import com.evenstar.PriorityQueue;
+import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -12,7 +13,8 @@ import static org.junit.jupiter.api.Assertions.*;
 class PriorityQueueTest
 {
     private PriorityQueue priorityQueue;
-    private ArrayList<Integer> constructNodeArray()
+    private static ArrayList<Integer> nodes;
+    private static ArrayList<Integer> constructNodeArray()
     {
         ArrayList<Integer> nodes = new ArrayList<>();
         nodes.add(3);
@@ -29,10 +31,15 @@ class PriorityQueueTest
         return nodes;
     }
 
+    @BeforeAll
+    public static void initializeNodeArray()
+    {
+        nodes = constructNodeArray();
+    }
+
     @BeforeEach
     public void createPriorityQueue()
     {
-        ArrayList<Integer> nodes = constructNodeArray();
         this.priorityQueue = new PriorityQueue(nodes);
     }
 
