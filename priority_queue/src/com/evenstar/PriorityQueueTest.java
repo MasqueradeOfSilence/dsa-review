@@ -73,12 +73,12 @@ class PriorityQueueTest
     }
 
     @Test
-    public void testFindLeftChildShouldFindTheLeftChildOfTheGivenNode()
+    public void testFindIndexOfLeftChildShouldFindTheLeftChildOfTheGivenNode()
     {
         // Left child = 2 * index - 1
         // Index = 4, value = 17
-        int firstLeftChildIndex = priorityQueue.findLeftChild(4);
+        int firstLeftChildIndex = priorityQueue.findIndexOfLeftChild(4);
         // Index = 9, value = 24
-        assertEquals(firstLeftChildIndex, 9);
+        assertEquals(9, firstLeftChildIndex);
     }
 }

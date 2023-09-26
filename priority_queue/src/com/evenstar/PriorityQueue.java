@@ -26,9 +26,9 @@ public class PriorityQueue
         return (int) Math.floor((numNodes / 2) - 1);
     }
 
-    public int findLeftChild(int index)
+    public int findIndexOfLeftChild(int index)
     {
-        return 2 * index - 1;
+        return 2 * index + 1;
     }
 
     public int getNumNodes()
