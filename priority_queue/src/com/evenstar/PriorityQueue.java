@@ -20,7 +20,7 @@ public class PriorityQueue
 
     }
 
-    public int findLastNonLeafNodeInTree()
+    public int findIndexOfLastNonLeafNodeInTree()
     {
         double numNodes = getNumNodes();
         return (int) Math.floor((numNodes / 2) - 1);

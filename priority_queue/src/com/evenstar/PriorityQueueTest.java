@@ -44,10 +44,10 @@ class PriorityQueueTest
     }
 
     @Test
-    public void testFindLastNonLeafNodeInTreeShouldReturnTheLowestRightmostNodeThatHasChildren()
+    public void testFindIndexOfLastNonLeafNodeInTreeShouldReturnTheLowestRightmostNodeThatHasChildren()
     {
-        int expectedNodeValue = 17;
-        int lastNodeValue = priorityQueue.findLastNonLeafNodeInTree();
+        int expectedNodeValue = 4;
+        int lastNodeValue = priorityQueue.findIndexOfLastNonLeafNodeInTree();
         assertEquals(expectedNodeValue, lastNodeValue);
     }
 
