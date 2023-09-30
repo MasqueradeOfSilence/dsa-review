@@ -98,8 +98,17 @@ class PriorityQueueTest
     public void testFindLeftChildShouldFindTheLeftChild()
     {
         int startingNodeIndex = 4;
-        int expectedValue = 17;
+        int expectedValue = 24;
         int actualValue = priorityQueue.findLeftChild(startingNodeIndex);
+        assertEquals(expectedValue, actualValue);
+    }
+
+    @Test
+    public void testFindRightChildShouldFindTheRightChild()
+    {
+        int startingNodeIndex = 4;
+        int expectedValue = 29;
+        int actualValue = priorityQueue.findRightChild(startingNodeIndex);
         assertEquals(expectedValue, actualValue);
     }
 }
