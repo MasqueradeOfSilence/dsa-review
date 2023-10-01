@@ -111,4 +111,16 @@ class PriorityQueueTest
         int actualValue = priorityQueue.findRightChild(startingNodeIndex);
         assertEquals(expectedValue, actualValue);
     }
+
+    @Test
+    public void testFindLargerValueShouldReturnTheLargerValue()
+    {
+        int leftChildValue = 24;
+        int rightChildValue = 29;
+        // intellisense calls this redundant but I like the clarity
+        int expectedLargerValue = rightChildValue;
+        int actualLargerValue = priorityQueue.findLargerValue(leftChildValue, rightChildValue);
+        assertEquals(expectedLargerValue, actualLargerValue);
+    }
+
 }

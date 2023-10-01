@@ -20,6 +20,11 @@ public class PriorityQueue
 
     }
 
+    public int findLargerValue(int value1, int value2)
+    {
+        return Math.max(value1, value2);
+    }
+
     public int findIndexOfLastNonLeafNodeInTree()
     {
         double numNodes = getNumNodes();
