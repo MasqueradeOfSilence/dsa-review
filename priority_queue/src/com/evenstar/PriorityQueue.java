@@ -17,7 +17,7 @@ public class PriorityQueue
 
     public void heapify()
     {
-
+        maxHeap.heapify();
     }
 
     public int findLargerValue(int value1, int value2)
@@ -27,8 +27,7 @@ public class PriorityQueue
 
     public int findIndexOfLastNonLeafNodeInTree()
     {
-        double numNodes = getNumNodes();
-        return (int) Math.floor((numNodes / 2) - 1);
+        return maxHeap.findIndexOfLastNonLeafNodeInTree();
     }
 
     public int findLeftChild(int index)

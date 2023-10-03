@@ -15,4 +15,15 @@ public class MaxHeap
     {
         return nodes;
     }
+
+    public void heapify()
+    {
+        int startIndex = findIndexOfLastNonLeafNodeInTree();
+    }
+
+    public int findIndexOfLastNonLeafNodeInTree()
+    {
+        double numNodes = nodes.size();
+        return (int) Math.floor((numNodes / 2) - 1);
+    }
 }

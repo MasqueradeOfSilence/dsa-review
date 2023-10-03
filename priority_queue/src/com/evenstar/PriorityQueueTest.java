@@ -43,6 +43,7 @@ class PriorityQueueTest
         this.priorityQueue = new PriorityQueue(nodes);
     }
 
+    // This is the starting index of the array for heapify
     @Test
     public void testFindIndexOfLastNonLeafNodeInTreeShouldReturnTheLowestRightmostNodeThatHasChildren()
     {
