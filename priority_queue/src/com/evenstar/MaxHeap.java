@@ -19,6 +19,12 @@ public class MaxHeap
     public void heapify()
     {
         int startIndex = findIndexOfLastNonLeafNodeInTree();
+        int leftChildIndex = findIndexOfLeftChild(startIndex);
+    }
+
+    public int findIndexOfLeftChild(int index)
+    {
+        return 2 * index + 1;
     }
 
     public int findIndexOfLastNonLeafNodeInTree()

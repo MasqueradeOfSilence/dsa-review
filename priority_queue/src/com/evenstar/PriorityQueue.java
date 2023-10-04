@@ -42,7 +42,7 @@ public class PriorityQueue
 
     public int findIndexOfLeftChild(int index)
     {
-        return 2 * index + 1;
+        return maxHeap.findIndexOfLeftChild(index);
     }
 
     public int findIndexOfRightChild(int index)
