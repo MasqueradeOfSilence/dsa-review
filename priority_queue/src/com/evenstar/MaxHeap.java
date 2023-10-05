@@ -20,11 +20,18 @@ public class MaxHeap
     {
         int startIndex = findIndexOfLastNonLeafNodeInTree();
         int leftChildIndex = findIndexOfLeftChild(startIndex);
+        int rightChildIndex = findIndexOfRightChild(startIndex);
+
     }
 
     public int findIndexOfLeftChild(int index)
     {
         return 2 * index + 1;
+    }
+
+    public int findIndexOfRightChild(int index)
+    {
+        return 2 * index + 2;
     }
 
     public int findIndexOfLastNonLeafNodeInTree()
