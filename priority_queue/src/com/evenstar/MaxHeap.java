@@ -21,10 +21,12 @@ public class MaxHeap
         int startIndex = findIndexOfLastNonLeafNodeInTree();
         int leftChildIndex = findIndexOfLeftChild(startIndex);
         int rightChildIndex = findIndexOfRightChild(startIndex);
-        int leftChildValue = findLeftChild(leftChildIndex);
+        int leftChildValue = findChildAtIndex(leftChildIndex);
+        int rightChildValue = findChildAtIndex(rightChildIndex);
     }
 
-    public int findLeftChild(int index)
+    // probably need to unit test these too
+    public int findChildAtIndex(int index)
     {
         return nodes.get(index);
     }
