@@ -25,6 +25,17 @@ public class MaxHeap
         int rightChildValue = findChildAtIndex(rightChildIndex);
     }
 
+    // todo what if equal size?
+    public boolean leftChildIsLarger(int leftChild, int rightChild)
+    {
+        return leftChild > rightChild;
+    }
+
+    public boolean rightChildIsLarger(int leftChild, int rightChild)
+    {
+        return leftChild < rightChild;
+    }
+
     // probably need to unit test these too
     public int findChildAtIndex(int index)
     {
