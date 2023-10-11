@@ -23,6 +23,11 @@ public class MaxHeap
         int rightChildIndex = findIndexOfRightChild(startIndex);
         int leftChildValue = findChildAtIndex(leftChildIndex);
         int rightChildValue = findChildAtIndex(rightChildIndex);
+        if (leftChildIsLarger(leftChildValue, rightChildValue))
+        {
+
+        }
+        
     }
 
     // todo what if equal size?
