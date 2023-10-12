@@ -27,6 +27,14 @@ public class MaxHeap
         {
 
         }
+        else if (rightChildIsLarger(leftChildValue, rightChildValue))
+        {
+
+        }
+        else
+        {
+
+        }
         
     }
 
