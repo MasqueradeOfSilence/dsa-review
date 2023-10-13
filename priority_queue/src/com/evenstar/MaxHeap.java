@@ -33,12 +33,11 @@ public class MaxHeap
         }
         else
         {
-
+            // Equal size case
         }
         
     }
 
-    // todo what if equal size?
     public boolean leftChildIsLarger(int leftChild, int rightChild)
     {
         return leftChild > rightChild;
