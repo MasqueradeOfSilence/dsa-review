@@ -38,6 +38,13 @@ public class MaxHeap
         
     }
 
+    // unit test me pls
+    public int findLargerChild(int child1, int child2)
+    {
+        return Math.max(child1, child2);
+    }
+
+    // not sure if needed
     public boolean leftChildIsLarger(int leftChild, int rightChild)
     {
         return leftChild > rightChild;
