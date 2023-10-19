@@ -1,5 +1,4 @@
 import com.evenstar.MaxHeap;
-import com.evenstar.PriorityQueue;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
