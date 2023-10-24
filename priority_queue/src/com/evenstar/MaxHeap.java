@@ -25,7 +25,7 @@ public class MaxHeap
         int rightChildValue = findChildAtIndex(rightChildIndex);
         if (leftChildIsLarger(leftChildValue, rightChildValue))
         {
-
+            // Basically, we find the larger child and swap that. I bet we don't need this if-else
         }
         else if (rightChildIsLarger(leftChildValue, rightChildValue))
         {
