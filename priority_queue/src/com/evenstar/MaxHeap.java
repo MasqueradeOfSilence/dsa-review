@@ -2,6 +2,10 @@ package com.evenstar;
 
 import java.util.ArrayList;
 
+/**
+ * General concept of MaxHeap with test case and sample code: https://builtin.com/software-engineering-perspectives/heapify-heap-tree-cpp
+ */
+
 public class MaxHeap
 {
     private ArrayList<Integer> nodes;
