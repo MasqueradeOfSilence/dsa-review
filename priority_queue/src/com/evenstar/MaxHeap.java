@@ -4,6 +4,9 @@ import java.util.ArrayList;
 
 /**
  * General concept of MaxHeap with test case and sample code: https://builtin.com/software-engineering-perspectives/heapify-heap-tree-cpp
+ *
+ * Heapify does not inherently guarantee FIFO for equally-prioritized queue elements. The MaxHeap should fully abstract out all heapifying,
+ *  and any logic specific to priority queues needs to be implemented in the PriorityQueue class.
  */
 
 public class MaxHeap
