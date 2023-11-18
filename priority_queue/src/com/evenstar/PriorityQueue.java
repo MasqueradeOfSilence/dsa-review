@@ -15,6 +15,7 @@ public class PriorityQueue
         maxHeap = new com.evenstar.MaxHeap(nodeValues);
     }
 
+    // TODO this is not needed. We need normal queue operations here.
     public void heapify()
     {
         maxHeap.heapify();
