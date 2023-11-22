@@ -6,7 +6,7 @@ import java.util.ArrayList;
 
 public class MaxHeapCustom
 {
-    private ArrayList<PQNode> nodeList;
+    private final ArrayList<PQNode> nodeList;
     private static int positionInLine = 0;
 
     public MaxHeapCustom(Integer[] elements)
@@ -21,6 +21,22 @@ public class MaxHeapCustom
     public MaxHeapCustom(ArrayList<PQNode> nodeList)
     {
         this.nodeList = nodeList;
+    }
+
+    private int findLastNonLeafNode()
+    {
+        return (int)Math.floor((nodeList.size() / 2.0) - 1.0);
+    }
+
+    public int computeStartingIndex()
+    {
+        return findLastNonLeafNode();
+    }
+
+    public PQNode computeLeftChildAtIndex(int index)
+    {
+        int leftChildIndex = 2 * index + 1;
+        return nodeList.get(leftChildIndex);
     }
 
     public void addElement(int priority)
@@ -41,6 +57,7 @@ public class MaxHeapCustom
 
     public ArrayList<PQNode> heapify()
     {
+        int startIndex = computeStartingIndex();
 
         return nodeList;
     }

@@ -20,6 +20,22 @@ class MaxHeapCustomTest
     }
 
     @Test
+    void computeStartIndexShouldGetLastNonLeafNode()
+    {
+        Integer[] elements = { 3, 5, 8, 10, 17, 11, 13, 19, 22, 24, 29 };
+        MaxHeapCustom maxHeap = new MaxHeapCustom(elements);
+        int startIndex = maxHeap.computeStartingIndex();
+        int expectedStartIndex = 4;
+        assertEquals(startIndex, expectedStartIndex);
+    }
+
+    @Test
+    void computeLeftChildAtIndexShouldGetTheLeftChildNode()
+    {
+        
+    }
+
+    @Test
     void heapifyShouldEnforceMaxHeapProperty()
     {
         Integer[] elements = { 3, 5, 8, 10, 17, 11, 13, 19, 22, 24, 29 };
@@ -38,6 +54,6 @@ class MaxHeapCustomTest
     @Test
     void heapifyShouldEnforceFIFOForEqualPriorities()
     {
-
+        Integer[] elements = { 3, 5, 8, 10, 17, 11, 13, 19, 22, 17, 24, 29 };
     }
 }
