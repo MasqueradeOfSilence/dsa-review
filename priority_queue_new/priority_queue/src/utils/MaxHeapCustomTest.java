@@ -32,7 +32,7 @@ class MaxHeapCustomTest
     @Test
     void computeLeftChildAtIndexShouldGetTheLeftChildNode()
     {
-        
+
     }
 
     @Test
