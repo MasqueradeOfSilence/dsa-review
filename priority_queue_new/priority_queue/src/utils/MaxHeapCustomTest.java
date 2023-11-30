@@ -30,9 +30,14 @@ class MaxHeapCustomTest
     }
 
     @Test
-    void computeLeftChildAtIndexShouldGetTheLeftChildNode()
+    void computeLeftChildAtIndexShouldGetTheValueOfTheLeftChildNode()
     {
-
+        Integer[] elements = { 3, 5, 8, 10, 17, 11, 13, 19, 22, 24, 29 };
+        MaxHeapCustom maxHeap = new MaxHeapCustom(elements);
+        PQNode leftChildOfStartIndex = maxHeap.computeLeftChildAtIndex(4);
+        int expectedValueOfLeftChild = 24;
+        int actualValueOfLeftChild = leftChildOfStartIndex.getPriorityValue();
+        assertEquals(expectedValueOfLeftChild, actualValueOfLeftChild);
     }
 
     @Test
@@ -46,7 +51,7 @@ class MaxHeapCustomTest
         for (int i = 0; i < nodes.size(); i++)
         {
             PQNode currentNode = nodes.get(i);
-            int value = currentNode.getPriority();
+            int value = currentNode.getPriorityValue();
             assertEquals(value, prioritized[i]);
         }
     }

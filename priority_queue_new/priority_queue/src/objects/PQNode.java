@@ -2,18 +2,18 @@ package objects;
 
 public class PQNode
 {
-    private final int priority;
+    private final int priorityValue;
     private final int queueOrder;
 
     public PQNode(int priority, int queueOrder)
     {
-        this.priority = priority;
+        this.priorityValue = priority;
         this.queueOrder = queueOrder;
     }
 
-    public int getPriority()
+    public int getPriorityValue()
     {
-        return priority;
+        return priorityValue;
     }
 
     public int getQueueOrder()
