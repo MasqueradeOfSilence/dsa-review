@@ -63,6 +63,7 @@ public class MaxHeapCustom
     public ArrayList<PQNode> heapify()
     {
         int startIndex = computeStartingIndex();
+        PQNode leftChild = computeLeftChildAtIndex(startIndex);
 
         return nodeList;
     }
