@@ -33,15 +33,26 @@ public class MaxHeapCustom
         return findLastNonLeafNode();
     }
 
-    private int computeLeftChildIndex(int index)
+    private int computeLeftChildIndex(int parentIndex)
     {
-        return 2 * index + 1;
+        return 2 * parentIndex + 1;
     }
 
     public PQNode computeLeftChildAtIndex(int index)
     {
         int leftChildIndex = computeLeftChildIndex(index);
         return nodeList.get(leftChildIndex);
+    }
+
+    private int computeRightChildIndex(int parentIndex)
+    {
+        return 2 * parentIndex + 2;
+    }
+
+    public PQNode computeRightChildAtIndex(int index)
+    {
+        int rightChildIndex = computeRightChildIndex(index);
+        return nodeList.get(rightChildIndex);
     }
 
     public void addElement(int priority)

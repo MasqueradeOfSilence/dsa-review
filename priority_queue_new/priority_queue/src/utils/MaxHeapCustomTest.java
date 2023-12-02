@@ -41,6 +41,17 @@ class MaxHeapCustomTest
     }
 
     @Test
+    void computeRightChildAtIndexShouldGetTheValueOfTheRightChildNode()
+    {
+        Integer[] elements = { 3, 5, 8, 10, 17, 11, 13, 19, 22, 24, 29 };
+        MaxHeapCustom maxHeap = new MaxHeapCustom(elements);
+        PQNode rightChildOfStartIndex = maxHeap.computeRightChildAtIndex(4);
+        int expectedValueOfRightChild = 29;
+        int actualValueOfRightChild = rightChildOfStartIndex.getPriorityValue();
+        assertEquals(expectedValueOfRightChild, actualValueOfRightChild);
+    }
+
+    @Test
     void heapifyShouldEnforceMaxHeapProperty()
     {
         Integer[] elements = { 3, 5, 8, 10, 17, 11, 13, 19, 22, 24, 29 };
