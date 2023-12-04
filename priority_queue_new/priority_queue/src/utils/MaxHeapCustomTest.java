@@ -52,6 +52,17 @@ class MaxHeapCustomTest
     }
 
     @Test
+    void findLargerChildShouldReturnTheLargerChildLeftOrRight()
+    {
+        Integer[] elements = { 3, 5, 8, 10, 17, 11, 13, 19, 22, 24, 29 };
+        MaxHeapCustom maxHeap = new MaxHeapCustom(elements);
+        PQNode largerChildOfStartIndex = maxHeap.findLargerChild(4);
+        int expectedValueOfLargerChild = 29;
+        int actualValueOfLargerChild = largerChildOfStartIndex.getPriorityValue();
+        assertEquals(expectedValueOfLargerChild, actualValueOfLargerChild);
+    }
+
+    @Test
     void heapifyShouldEnforceMaxHeapProperty()
     {
         Integer[] elements = { 3, 5, 8, 10, 17, 11, 13, 19, 22, 24, 29 };
