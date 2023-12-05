@@ -6,6 +6,11 @@ import java.util.ArrayList;
 
 public class MaxHeapCustom
 {
+    public ArrayList<PQNode> getNodeList()
+    {
+        return nodeList;
+    }
+
     private final ArrayList<PQNode> nodeList;
     private static int positionInLine = 0;
 
@@ -96,6 +101,26 @@ public class MaxHeapCustom
         return nodeWithGreaterValue(leftChild, rightChild);
     }
 
+    private int findIndexOfChild(PQNode child)
+    {
+        for (int i = 0; i < nodeList.size(); i++)
+        {
+            if (child == nodeList.get(i))
+            {
+                return i;
+            }
+        }
+        return -1;
+    }
+
+    public void swapParentAndChild(PQNode parent, PQNode child, int parentIndex)
+    {
+        int childIndex = findIndexOfChild(child);
+        assert(childIndex != -1);
+        nodeList.set(parentIndex, child);
+        nodeList.set(childIndex, parent);
+    }
+
     public void addElement(int priority)
     {
         addPQNode(new PQNode(priority, positionInLine));
@@ -116,7 +141,9 @@ public class MaxHeapCustom
     public ArrayList<PQNode> heapify()
     {
         int startIndex = computeStartingIndex();
+        PQNode parent = nodeList.get(startIndex);
         PQNode largerChild = findLargerChild(startIndex);
+        swapParentAndChild(parent, largerChild, startIndex);
 
         return nodeList;
     }

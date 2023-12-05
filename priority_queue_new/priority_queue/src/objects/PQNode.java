@@ -1,5 +1,7 @@
 package objects;
 
+import java.util.Objects;
+
 public class PQNode
 {
     private final int priorityValue;
@@ -19,5 +21,21 @@ public class PQNode
     public int getQueueOrder()
     {
         return queueOrder;
+    }
+
+    @Override
+    public boolean equals(Object o)
+    {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        PQNode pqNode = (PQNode) o;
+        return priorityValue == pqNode.priorityValue &&
+                queueOrder == pqNode.queueOrder;
+    }
+
+    @Override
+    public int hashCode()
+    {
+        return Objects.hash(priorityValue, queueOrder);
     }
 }

@@ -63,6 +63,20 @@ class MaxHeapCustomTest
     }
 
     @Test
+    void swapParentAndChildShouldSwitchPositions()
+    {
+        Integer[] elements = { 3, 5, 8, 10, 17, 11, 13, 19, 22, 24, 29 };
+        MaxHeapCustom maxHeap = new MaxHeapCustom(elements);
+        PQNode parent = maxHeap.getNodeList().get(4);
+        PQNode child = maxHeap.getNodeList().get(10);
+        assertEquals(maxHeap.getNodeList().get(4).getPriorityValue(), 17);
+        assertEquals(maxHeap.getNodeList().get(10).getPriorityValue(), 29);
+        maxHeap.swapParentAndChild(parent, child, 4);
+        assertEquals(maxHeap.getNodeList().get(4).getPriorityValue(), 29);
+        assertEquals(maxHeap.getNodeList().get(10).getPriorityValue(), 17);
+    }
+
+    @Test
     void heapifyShouldEnforceMaxHeapProperty()
     {
         Integer[] elements = { 3, 5, 8, 10, 17, 11, 13, 19, 22, 24, 29 };
