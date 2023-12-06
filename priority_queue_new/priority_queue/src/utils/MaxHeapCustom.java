@@ -144,7 +144,15 @@ public class MaxHeapCustom
         PQNode parent = nodeList.get(startIndex);
         PQNode largerChild = findLargerChild(startIndex);
         swapParentAndChild(parent, largerChild, startIndex);
-
+        // potential loop here
+        int nextNodeIndex = startIndex - 1;
+        if (nextNodeIndex < 0)
+        {
+            // root node reached
+            return nodeList;
+        }
+        parent = nodeList.get(nextNodeIndex);
+        largerChild = findLargerChild(nextNodeIndex);
         return nodeList;
     }
 }
