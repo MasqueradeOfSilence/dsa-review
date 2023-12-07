@@ -121,6 +121,28 @@ public class MaxHeapCustom
         nodeList.set(childIndex, parent);
     }
 
+    private boolean childIsLargerThanParent(PQNode parent, PQNode child)
+    {
+        int parentValue = parent.getPriorityValue();
+        int childValue = child.getPriorityValue();
+        return childValue > parentValue;
+    }
+
+    private boolean childAndParentAreEqualAndChildGotInLineFirst(PQNode parent, PQNode child)
+    {
+        int parentValue = parent.getPriorityValue();
+        int childValue = child.getPriorityValue();
+        int parentPlaceInLine = parent.getQueueOrder();
+        int childPlaceInLine = child.getQueueOrder();
+        return childValue == parentValue && childPlaceInLine < parentPlaceInLine;
+    }
+
+    private boolean parentAndChildShouldBeSwapped(PQNode parent, PQNode child)
+    {
+        return childAndParentAreEqualAndChildGotInLineFirst(parent, child)
+                || childIsLargerThanParent(parent, child);
+    }
+
     public void addElement(int priority)
     {
         addPQNode(new PQNode(priority, positionInLine));
@@ -138,21 +160,36 @@ public class MaxHeapCustom
         heapify();
     }
 
+    private boolean atTopOfTree(int index)
+    {
+        return index <= 0;
+    }
+
     public ArrayList<PQNode> heapify()
     {
-        int startIndex = computeStartingIndex();
-        PQNode parent = nodeList.get(startIndex);
-        PQNode largerChild = findLargerChild(startIndex);
-        swapParentAndChild(parent, largerChild, startIndex);
-        // potential loop here
-        int nextNodeIndex = startIndex - 1;
-        if (nextNodeIndex < 0)
+        int index = computeStartingIndex();
+        PQNode parent = nodeList.get(index);
+        PQNode largerChild = findLargerChild(index);
+        if (parentAndChildShouldBeSwapped(parent, largerChild))
         {
-            // root node reached
-            return nodeList;
+            swapParentAndChild(parent, largerChild, index);
         }
-        parent = nodeList.get(nextNodeIndex);
-        largerChild = findLargerChild(nextNodeIndex);
+        while (!atTopOfTree(index))
+        {
+            index -= 1;
+            if (index < 0)
+            {
+                // root node reached
+                return nodeList;
+            }
+            parent = nodeList.get(index);
+            largerChild = findLargerChild(index);
+            // not complete yet. need to modify to account for recursing deeper. not yet ready to run
+            if (parentAndChildShouldBeSwapped(parent, largerChild))
+            {
+                swapParentAndChild(parent, largerChild, index);
+            }
+        }
         return nodeList;
     }
 }
