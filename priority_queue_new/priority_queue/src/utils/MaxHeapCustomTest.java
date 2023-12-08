@@ -84,12 +84,18 @@ class MaxHeapCustomTest
         ArrayList<PQNode> nodes = maxHeap.heapify();
         Integer[] prioritized = { 29, 24, 13, 22, 17, 11, 8, 19, 10, 5, 3 };
         assertEquals(nodes.size(), prioritized.length);
+        System.out.println("Nodes: ");
+        for (int i = 0; i < nodes.size(); i++)
+        {
+            System.out.println(nodes.get(i).getPriorityValue());
+        }
         for (int i = 0; i < nodes.size(); i++)
         {
             PQNode currentNode = nodes.get(i);
             int value = currentNode.getPriorityValue();
             assertEquals(value, prioritized[i]);
         }
+        System.out.println("THE END");
     }
 
     @Test

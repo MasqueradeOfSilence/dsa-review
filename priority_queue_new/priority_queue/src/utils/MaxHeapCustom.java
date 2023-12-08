@@ -184,10 +184,33 @@ public class MaxHeapCustom
             }
             parent = nodeList.get(index);
             largerChild = findLargerChild(index);
-            // not complete yet. need to modify to account for recursing deeper. not yet ready to run
             if (parentAndChildShouldBeSwapped(parent, largerChild))
             {
                 swapParentAndChild(parent, largerChild, index);
+            }
+            // next, we need to recuse as far down as necessary
+            boolean finishedVisitingChildren = false;
+            int tempIndex = index;
+            while (!finishedVisitingChildren)
+            {
+                if (tempIndex >= nodeList.size())
+                {
+                    finishedVisitingChildren = true;
+                }
+                else
+                {
+                    PQNode tempParent = nodeList.get(tempIndex);
+                    PQNode tempLargerChild = findLargerChild(tempIndex);
+                    if (parentAndChildShouldBeSwapped(tempParent, tempLargerChild))
+                    {
+                        swapParentAndChild(tempParent, tempLargerChild, tempIndex);
+                        tempIndex = findIndexOfChild(tempLargerChild);
+                    }
+                    else
+                    {
+                        finishedVisitingChildren = true;
+                    }
+                }
             }
         }
         return nodeList;
