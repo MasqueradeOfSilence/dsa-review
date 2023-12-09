@@ -165,6 +165,16 @@ public class MaxHeapCustom
         return index <= 0;
     }
 
+    private void printNodeList()
+    {
+        System.out.println("Printing node list...");
+        for (PQNode pqNode : nodeList)
+        {
+            System.out.println(pqNode.getPriorityValue());
+        }
+        System.out.println("End print");
+    }
+
     public ArrayList<PQNode> heapify()
     {
         int index = computeStartingIndex();
@@ -174,6 +184,7 @@ public class MaxHeapCustom
         {
             swapParentAndChild(parent, largerChild, index);
         }
+        printNodeList();
         while (!atTopOfTree(index))
         {
             index -= 1;
@@ -188,12 +199,14 @@ public class MaxHeapCustom
             {
                 swapParentAndChild(parent, largerChild, index);
             }
+            printNodeList();
             // next, we need to recuse as far down as necessary
             boolean finishedVisitingChildren = false;
             int tempIndex = index;
+            // TODO the error is here, when needing to recurse more deeply
             while (!finishedVisitingChildren)
             {
-                if (tempIndex >= nodeList.size())
+                if (tempIndex >= nodeList.size()) // also I think we can add another condition here, TBD
                 {
                     finishedVisitingChildren = true;
                 }
@@ -204,6 +217,7 @@ public class MaxHeapCustom
                     if (parentAndChildShouldBeSwapped(tempParent, tempLargerChild))
                     {
                         swapParentAndChild(tempParent, tempLargerChild, tempIndex);
+                        printNodeList();
                         tempIndex = findIndexOfChild(tempLargerChild);
                     }
                     else
