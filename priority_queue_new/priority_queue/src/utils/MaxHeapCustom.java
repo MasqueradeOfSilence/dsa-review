@@ -60,6 +60,16 @@ public class MaxHeapCustom
         return nodeList.get(rightChildIndex);
     }
 
+    private boolean leftChildIsOOB(int parentIndex)
+    {
+        return computeLeftChildIndex(parentIndex) >= nodeList.size();
+    }
+
+    private boolean rightChildIsOOB(int parentIndex)
+    {
+        return computeRightChildIndex(parentIndex) >= nodeList.size();
+    }
+
     private boolean prioritiesAreEqual(PQNode left, PQNode right)
     {
         return left.getPriorityValue() == right.getPriorityValue();
@@ -105,7 +115,7 @@ public class MaxHeapCustom
     {
         for (int i = 0; i < nodeList.size(); i++)
         {
-            if (child == nodeList.get(i))
+            if (child.equals(nodeList.get(i)))
             {
                 return i;
             }
@@ -202,8 +212,7 @@ public class MaxHeapCustom
             printNodeList();
             // next, we need to recuse as far down as necessary
             boolean finishedVisitingChildren = false;
-            int tempIndex = index;
-            // TODO the error is here, when needing to recurse more deeply
+            int tempIndex = findIndexOfChild(parent);
             while (!finishedVisitingChildren)
             {
                 if (tempIndex >= nodeList.size()) // also I think we can add another condition here, TBD
@@ -213,12 +222,26 @@ public class MaxHeapCustom
                 else
                 {
                     PQNode tempParent = nodeList.get(tempIndex);
-                    PQNode tempLargerChild = findLargerChild(tempIndex);
+                    PQNode tempLargerChild;
+                    if (rightChildIsOOB(tempIndex) && !leftChildIsOOB(tempIndex))
+                    {
+                        tempLargerChild = computeLeftChildAtIndex(tempIndex);
+                    }
+                    else if (leftChildIsOOB(tempIndex))
+                    {
+                        finishedVisitingChildren = true;
+                        continue;
+                    }
+                    else
+                    {
+                        tempLargerChild = findLargerChild(tempIndex);
+                    }
                     if (parentAndChildShouldBeSwapped(tempParent, tempLargerChild))
                     {
-                        swapParentAndChild(tempParent, tempLargerChild, tempIndex);
-                        printNodeList();
+                        int saved = tempIndex;
                         tempIndex = findIndexOfChild(tempLargerChild);
+                        swapParentAndChild(tempParent, tempLargerChild, saved);
+                        printNodeList();
                     }
                     else
                     {
