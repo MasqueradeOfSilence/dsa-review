@@ -105,6 +105,7 @@ class MaxHeapCustomTest
     @Test
     void deleteShouldEnforceTheMaxHeapProperty()
     {
-
+        // https://www.programiz.com/dsa/priority-queue
+        Integer[] elements = { 9, 3, 7, 1, 4, 2, 5 };
     }
 }
