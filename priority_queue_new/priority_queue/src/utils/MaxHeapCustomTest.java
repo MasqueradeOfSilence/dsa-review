@@ -84,7 +84,6 @@ class MaxHeapCustomTest
         ArrayList<PQNode> nodes = maxHeap.heapify();
         Integer[] prioritized = { 29, 24, 13, 22, 17, 11, 8, 19, 10, 5, 3 };
         assertEquals(nodes.size(), prioritized.length);
-        System.out.println("Nodes: ");
         for (int i = 0; i < nodes.size(); i++)
         {
             System.out.println(nodes.get(i).getPriorityValue());
@@ -95,12 +94,17 @@ class MaxHeapCustomTest
             int value = currentNode.getPriorityValue();
             assertEquals(value, prioritized[i]);
         }
-        System.out.println("THE END");
     }
 
     @Test
     void heapifyShouldEnforceFIFOForEqualPriorities()
     {
         Integer[] elements = { 3, 5, 8, 10, 17, 11, 13, 19, 22, 17, 24, 29 };
+    }
+
+    @Test
+    void deleteShouldEnforceTheMaxHeapProperty()
+    {
+
     }
 }

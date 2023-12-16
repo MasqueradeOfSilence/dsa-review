@@ -210,12 +210,11 @@ public class MaxHeapCustom
                 swapParentAndChild(parent, largerChild, index);
             }
             printNodeList();
-            // next, we need to recuse as far down as necessary
             boolean finishedVisitingChildren = false;
             int tempIndex = findIndexOfChild(parent);
             while (!finishedVisitingChildren)
             {
-                if (tempIndex >= nodeList.size()) // also I think we can add another condition here, TBD
+                if (tempIndex >= nodeList.size())
                 {
                     finishedVisitingChildren = true;
                 }
