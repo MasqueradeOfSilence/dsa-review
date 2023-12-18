@@ -107,5 +107,7 @@ class MaxHeapCustomTest
     {
         // https://www.programiz.com/dsa/priority-queue
         Integer[] elements = { 9, 3, 7, 1, 4, 2, 5 };
+        int deletePosition = 1;
+
     }
 }
