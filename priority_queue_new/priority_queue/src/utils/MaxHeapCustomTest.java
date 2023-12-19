@@ -109,5 +109,6 @@ class MaxHeapCustomTest
         Integer[] elements = { 9, 3, 7, 1, 4, 2, 5 };
         int deletePosition = 1;
 
+        Integer[] expectedElementsWhenDeleted = { 9, 5, 7, 1, 4, 2 };
     }
 }
