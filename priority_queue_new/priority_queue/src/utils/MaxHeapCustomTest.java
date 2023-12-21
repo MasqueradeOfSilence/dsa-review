@@ -84,10 +84,10 @@ class MaxHeapCustomTest
         ArrayList<PQNode> nodes = maxHeap.heapify();
         Integer[] prioritized = { 29, 24, 13, 22, 17, 11, 8, 19, 10, 5, 3 };
         assertEquals(nodes.size(), prioritized.length);
-        for (int i = 0; i < nodes.size(); i++)
-        {
-            System.out.println(nodes.get(i).getPriorityValue());
-        }
+//        for (int i = 0; i < nodes.size(); i++)
+//        {
+//            System.out.println(nodes.get(i).getPriorityValue());
+//        }
         for (int i = 0; i < nodes.size(); i++)
         {
             PQNode currentNode = nodes.get(i);
@@ -108,7 +108,15 @@ class MaxHeapCustomTest
         // https://www.programiz.com/dsa/priority-queue
         Integer[] elements = { 9, 3, 7, 1, 4, 2, 5 };
         int deletePosition = 1;
-
+        MaxHeapCustom maxHeap = new MaxHeapCustom(elements);
+        maxHeap.delete(deletePosition);
         Integer[] expectedElementsWhenDeleted = { 9, 5, 7, 1, 4, 2 };
+        ArrayList<PQNode> nodes = maxHeap.getNodeList();
+        for (int i = 0; i < nodes.size(); i++)
+        {
+            PQNode currentNode = nodes.get(i);
+            int value = currentNode.getPriorityValue();
+            assertEquals(value, expectedElementsWhenDeleted[i]);
+        }
     }
 }

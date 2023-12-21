@@ -57,6 +57,10 @@ public class MaxHeapCustom
     public PQNode computeRightChildAtIndex(int index)
     {
         int rightChildIndex = computeRightChildIndex(index);
+        if (rightChildIndex >= nodeList.size())
+        {
+            return null;
+        }
         return nodeList.get(rightChildIndex);
     }
 
@@ -104,6 +108,18 @@ public class MaxHeapCustom
     {
         PQNode leftChild = computeLeftChildAtIndex(index);
         PQNode rightChild = computeRightChildAtIndex(index);
+        if (leftChild == null && rightChild != null)
+        {
+            return rightChild;
+        }
+        if (leftChild != null && rightChild == null)
+        {
+            return leftChild;
+        }
+        if (leftChild == null && rightChild == null)
+        {
+            return null;
+        }
         if (prioritiesAreEqual(leftChild, rightChild))
         {
             return earlierNode(leftChild, rightChild);
@@ -159,9 +175,20 @@ public class MaxHeapCustom
         positionInLine++;
     }
 
-    public void delete()
+    public void delete(int deletePosition)
     {
-
+        if (nodeList.size() == 0 || deletePosition > nodeList.size() - 1 || deletePosition < 0)
+        {
+            System.out.println("Error: Delete position is not valid");
+            return;
+        }
+        PQNode lastNode = nodeList.get(nodeList.size() - 1);
+        // Swap
+        PQNode nodeToDelete = nodeList.get(deletePosition);
+        nodeList.set(deletePosition, lastNode);
+        nodeList.set(nodeList.size() - 1, nodeToDelete);
+        nodeList.remove(nodeList.size() - 1);
+        heapify();
     }
 
     private void addPQNode(PQNode node)
@@ -190,11 +217,15 @@ public class MaxHeapCustom
         int index = computeStartingIndex();
         PQNode parent = nodeList.get(index);
         PQNode largerChild = findLargerChild(index);
+        if (largerChild == null)
+        {
+            return nodeList;
+        }
         if (parentAndChildShouldBeSwapped(parent, largerChild))
         {
             swapParentAndChild(parent, largerChild, index);
         }
-        printNodeList();
+//        printNodeList();
         while (!atTopOfTree(index))
         {
             index -= 1;
@@ -209,7 +240,7 @@ public class MaxHeapCustom
             {
                 swapParentAndChild(parent, largerChild, index);
             }
-            printNodeList();
+            //printNodeList();
             boolean finishedVisitingChildren = false;
             int tempIndex = findIndexOfChild(parent);
             while (!finishedVisitingChildren)
@@ -240,7 +271,7 @@ public class MaxHeapCustom
                         int saved = tempIndex;
                         tempIndex = findIndexOfChild(tempLargerChild);
                         swapParentAndChild(tempParent, tempLargerChild, saved);
-                        printNodeList();
+                        //printNodeList();
                     }
                     else
                     {

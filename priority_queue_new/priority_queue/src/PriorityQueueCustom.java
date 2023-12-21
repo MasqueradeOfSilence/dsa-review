@@ -22,9 +22,9 @@ public class PriorityQueueCustom
         this.maxHeap.addElement(priority);
     }
 
-    public void remove()
+    public void remove(int position)
     {
-        this.maxHeap.delete();
+        this.maxHeap.delete(position);
     }
 
     public PQNode peek()
