@@ -15,11 +15,6 @@ class MaxHeapCustomTest
     }
 
     @Test
-    void delete()
-    {
-    }
-
-    @Test
     void computeStartIndexShouldGetLastNonLeafNode()
     {
         Integer[] elements = { 3, 5, 8, 10, 17, 11, 13, 19, 22, 24, 29 };
@@ -84,10 +79,6 @@ class MaxHeapCustomTest
         ArrayList<PQNode> nodes = maxHeap.heapify();
         Integer[] prioritized = { 29, 24, 13, 22, 17, 11, 8, 19, 10, 5, 3 };
         assertEquals(nodes.size(), prioritized.length);
-//        for (int i = 0; i < nodes.size(); i++)
-//        {
-//            System.out.println(nodes.get(i).getPriorityValue());
-//        }
         for (int i = 0; i < nodes.size(); i++)
         {
             PQNode currentNode = nodes.get(i);
@@ -100,6 +91,7 @@ class MaxHeapCustomTest
     void heapifyShouldEnforceFIFOForEqualPriorities()
     {
         Integer[] elements = { 3, 5, 8, 10, 17, 11, 13, 19, 22, 17, 24, 29 };
+        // Once this is working, we can then extend out to the priority queue.
     }
 
     @Test
