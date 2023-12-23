@@ -90,8 +90,27 @@ class MaxHeapCustomTest
     @Test
     void heapifyShouldEnforceFIFOForEqualPriorities()
     {
-        Integer[] elements = { 3, 5, 8, 10, 17, 11, 13, 19, 22, 17, 24, 29 };
+        Integer[] elements = { 3, 5, 8, 10, 17, 17, 11, 13, 19, 22, 24, 29 };
         // Once this is working, we can then extend out to the priority queue.
+        MaxHeapCustom maxHeap = new MaxHeapCustom(elements);
+        ArrayList<PQNode> nodes = maxHeap.heapify();
+        int firstNodeOrdering = -1;
+        int secondNodeOrdering = -1;
+        for (PQNode node : nodes)
+        {
+            if (node.getPriorityValue() == 17)
+            {
+                if (firstNodeOrdering == -1)
+                {
+                    firstNodeOrdering = node.getQueueOrder();
+                }
+                else
+                {
+                    secondNodeOrdering = node.getQueueOrder();
+                }
+            }
+        }
+        assertTrue(firstNodeOrdering > secondNodeOrdering);
     }
 
     @Test
