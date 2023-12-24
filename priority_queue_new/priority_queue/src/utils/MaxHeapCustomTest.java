@@ -8,12 +8,6 @@ import java.util.ArrayList;
 
 class MaxHeapCustomTest
 {
-
-    @Test
-    void addElement()
-    {
-    }
-
     @Test
     void computeStartIndexShouldGetLastNonLeafNode()
     {
@@ -129,5 +123,11 @@ class MaxHeapCustomTest
             int value = currentNode.getPriorityValue();
             assertEquals(value, expectedElementsWhenDeleted[i]);
         }
+    }
+
+    @Test
+    void insertShouldInsertAndReHeapify()
+    {
+
     }
 }
