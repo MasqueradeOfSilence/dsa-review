@@ -128,6 +128,9 @@ class MaxHeapCustomTest
     @Test
     void insertShouldInsertAndReHeapify()
     {
+        Integer[] elements = { 9, 3, 5, 1, 4, 2};
+        int elementToInsert = 7;
 
+        Integer[] expectedElementsAfterInsertion = { 9, 3, 7, 1, 4, 2, 5 };
     }
 }
