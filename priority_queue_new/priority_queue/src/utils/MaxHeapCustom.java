@@ -20,6 +20,7 @@ public class MaxHeapCustom
         for (int i = 0; i < elements.length; i++)
         {
             nodeList.add(new PQNode(elements[i], i));
+            positionInLine++;
         }
     }
 

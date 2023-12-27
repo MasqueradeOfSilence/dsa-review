@@ -130,7 +130,17 @@ class MaxHeapCustomTest
     {
         Integer[] elements = { 9, 3, 5, 1, 4, 2};
         int elementToInsert = 7;
-
+        MaxHeapCustom maxHeap = new MaxHeapCustom(elements);
+        maxHeap.addElement(elementToInsert);
         Integer[] expectedElementsAfterInsertion = { 9, 3, 7, 1, 4, 2, 5 };
+        ArrayList<PQNode> nodes = maxHeap.getNodeList();
+        for (int i = 0; i < nodes.size(); i++)
+        {
+            PQNode currentNode = nodes.get(i);
+            int value = currentNode.getPriorityValue();
+            System.out.println(value);
+            // not working yet
+            //assertEquals(value, expectedElementsAfterInsertion[i]);
+        }
     }
 }
