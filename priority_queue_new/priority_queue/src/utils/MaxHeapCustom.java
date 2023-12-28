@@ -226,7 +226,7 @@ public class MaxHeapCustom
         {
             swapParentAndChild(parent, largerChild, index);
         }
-//        printNodeList();
+        //printNodeList();
         while (!atTopOfTree(index))
         {
             index -= 1;

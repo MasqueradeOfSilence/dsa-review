@@ -128,19 +128,19 @@ class MaxHeapCustomTest
     @Test
     void insertShouldInsertAndReHeapify()
     {
-        Integer[] elements = { 9, 3, 5, 1, 4, 2};
+        Integer[] elements = { 9, 3, 5, 1, 4, 2 };
         int elementToInsert = 7;
         MaxHeapCustom maxHeap = new MaxHeapCustom(elements);
         maxHeap.addElement(elementToInsert);
-        Integer[] expectedElementsAfterInsertion = { 9, 3, 7, 1, 4, 2, 5 };
+        // The Programiz example is slightly off
+        Integer[] expectedElementsAfterInsertion = { 9, 4, 7, 1, 3, 2, 5 };
         ArrayList<PQNode> nodes = maxHeap.getNodeList();
+        // print out the node at each step
         for (int i = 0; i < nodes.size(); i++)
         {
             PQNode currentNode = nodes.get(i);
             int value = currentNode.getPriorityValue();
-            System.out.println(value);
-            // not working yet
-            //assertEquals(value, expectedElementsAfterInsertion[i]);
+            assertEquals(value, expectedElementsAfterInsertion[i]);
         }
     }
 }
