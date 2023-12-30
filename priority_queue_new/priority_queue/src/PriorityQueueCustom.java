@@ -29,7 +29,7 @@ public class PriorityQueueCustom
 
     public PQNode peek()
     {
-        return null;
+        return this.maxHeap.peek();
     }
 
 }

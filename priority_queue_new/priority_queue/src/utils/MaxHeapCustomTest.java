@@ -143,4 +143,15 @@ class MaxHeapCustomTest
             assertEquals(value, expectedElementsAfterInsertion[i]);
         }
     }
+
+    @Test
+    void peekShouldReturnTheFirstElement()
+    {
+        Integer[] elements = { 9, 3, 7, 1, 4, 2, 5 };
+        MaxHeapCustom maxHeap = new MaxHeapCustom(elements);
+        PQNode firstNode = maxHeap.peek();
+        int expectedFirst = 9;
+        int actualFirst = firstNode.getPriorityValue();
+        assertEquals(expectedFirst, actualFirst);
+    }
 }

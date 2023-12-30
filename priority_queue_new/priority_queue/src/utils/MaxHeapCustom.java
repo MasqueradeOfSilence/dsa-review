@@ -192,6 +192,11 @@ public class MaxHeapCustom
         heapify();
     }
 
+    public PQNode peek()
+    {
+        return nodeList.get(0);
+    }
+
     private void addPQNode(PQNode node)
     {
         nodeList.add(node);
