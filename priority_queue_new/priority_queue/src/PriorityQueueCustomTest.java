@@ -4,12 +4,12 @@ class PriorityQueueCustomTest
 {
 
     @org.junit.jupiter.api.Test
-    void insert()
+    void insertShouldAddElementAndObeyPriorityRules()
     {
     }
 
     @org.junit.jupiter.api.Test
-    void remove()
+    void removeShouldRemoveElementAndObeyPriorityRules()
     {
     }
 }
