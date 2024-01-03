@@ -17,6 +17,16 @@ public class PriorityQueueCustom
         this.maxHeap = new MaxHeapCustom(nodes);
     }
 
+    public PriorityQueueCustom(Integer[] elements)
+    {
+        ArrayList<PQNode> nodeList = new ArrayList<>();
+        for (int i = 0; i < elements.length; i++)
+        {
+            nodeList.add(new PQNode(elements[i], i));
+        }
+        this.maxHeap = new MaxHeapCustom(nodeList);
+    }
+
     public void insert(int priority)
     {
         this.maxHeap.addElement(priority);
