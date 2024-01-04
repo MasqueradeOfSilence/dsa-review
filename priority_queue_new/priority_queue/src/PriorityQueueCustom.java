@@ -5,16 +5,11 @@ import java.util.ArrayList;
 
 public class PriorityQueueCustom
 {
-    private MaxHeapCustom maxHeap;
+    private final MaxHeapCustom maxHeap;
 
     public static void main(String[] args)
     {
         System.out.println("Hello custom priority queue implementation!");
-    }
-
-    public PriorityQueueCustom(ArrayList<PQNode> nodes)
-    {
-        this.maxHeap = new MaxHeapCustom(nodes);
     }
 
     public PriorityQueueCustom(Integer[] elements)
@@ -40,6 +35,11 @@ public class PriorityQueueCustom
     public PQNode peek()
     {
         return this.maxHeap.peek();
+    }
+
+    public ArrayList<PQNode> getQueue()
+    {
+        return this.maxHeap.getNodeList();
     }
 
 }

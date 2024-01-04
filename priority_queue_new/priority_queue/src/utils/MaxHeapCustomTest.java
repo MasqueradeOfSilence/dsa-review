@@ -135,7 +135,6 @@ class MaxHeapCustomTest
         // The Programiz example is slightly off
         Integer[] expectedElementsAfterInsertion = { 9, 4, 7, 1, 3, 2, 5 };
         ArrayList<PQNode> nodes = maxHeap.getNodeList();
-        // print out the node at each step
         for (int i = 0; i < nodes.size(); i++)
         {
             PQNode currentNode = nodes.get(i);
