@@ -22,6 +22,8 @@ public class Deque
     // Arbitrary max size
     private static final int MAX_SIZE = 100;
     private int circularArray[];
+    private int frontIndex = -1;
+    private int rearIndex = 0;
 
     public static void main(String[] args)
     {
@@ -31,6 +33,12 @@ public class Deque
     public Deque(int size)
     {
         assert(size <= MAX_SIZE);
+    }
+
+    public Deque(int size, int[] elements)
+    {
+        assert(size <= MAX_SIZE);
+        circularArray = elements;
     }
 
     public void insertFront(int elementToInsert)
