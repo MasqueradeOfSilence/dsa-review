@@ -38,7 +38,10 @@ public class Deque
     public Deque(int size, int[] elements)
     {
         assert(size <= MAX_SIZE);
+        assert(size == elements.length);
         circularArray = elements;
+        frontIndex = 0;
+        rearIndex = size - 1;
     }
 
     public void insertFront(int elementToInsert)
