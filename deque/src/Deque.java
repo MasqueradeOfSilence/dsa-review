@@ -46,6 +46,9 @@ public class Deque
 
     public void insertFront(int elementToInsert)
     {
-
+        if (frontIndex < 1)
+        {
+            frontIndex = circularArray.length - 1;
+        }
     }
 }
