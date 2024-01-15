@@ -35,13 +35,11 @@ public class Deque
         assert(size <= MAX_SIZE);
     }
 
-    public Deque(int size, int[] elements)
+    public Deque(int[] elements)
     {
-        assert(size <= MAX_SIZE);
-        assert(size == elements.length);
         circularArray = elements;
         frontIndex = 0;
-        rearIndex = size - 1;
+        rearIndex = elements.length - 1;
     }
 
     public void insertFront(int elementToInsert)
