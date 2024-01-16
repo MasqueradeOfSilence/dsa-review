@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 /**
  *
  * DEQUE
@@ -7,11 +9,12 @@
     It's like a movie theater with two entrances (that also serve as exits) where guests can line up to get in
         before showtime.
 
-    Classically, it is implemented with a circular array.
+    Classically, it is implemented with a circular queue.
 
     Time complexity is O(1) for all operations.
 
     LINK --> https://www.programiz.com/dsa/deque
+        and https://www.simplilearn.com/tutorials/data-structure-tutorial/dequeue-in-data-structure
 
     Unit tests are best generated via IntelliJ. Right click on a method, Generate, Test.
 
@@ -19,34 +22,60 @@
 
 public class Deque
 {
-    // Arbitrary max size
+    // Arbitrary max size at which the circular queue is full.
     private static final int MAX_SIZE = 100;
-    private int circularArray[];
-    private int frontIndex = -1;
+    private int circularQueue[];
+    private int frontIndex = 0;
     private int rearIndex = 0;
+    public static final int EMPTY_SLOT = -1;
 
     public static void main(String[] args)
     {
         System.out.println("Hello deque!");
     }
 
-    public Deque(int size)
+    public Deque()
     {
-        assert(size <= MAX_SIZE);
+        circularQueue = new int[MAX_SIZE];
+        for (int i = 0; i < MAX_SIZE; i++)
+        {
+            circularQueue[i] = EMPTY_SLOT;
+        }
     }
 
     public Deque(int[] elements)
     {
-        circularArray = elements;
+        circularQueue = new int[MAX_SIZE];
+        for (int i = 0; i < MAX_SIZE; i++)
+        {
+            if (i < elements.length)
+            {
+                circularQueue[i] = elements[i];
+            }
+            else
+            {
+                circularQueue[i] = EMPTY_SLOT;
+            }
+        }
         frontIndex = 0;
         rearIndex = elements.length - 1;
     }
 
     public void insertFront(int elementToInsert)
     {
-        if (frontIndex < 1)
+        if (frontIndex == 0)
         {
-            frontIndex = circularArray.length - 1;
+            frontIndex = MAX_SIZE - 1;
         }
+        else
+        {
+            frontIndex--;
+        }
+        circularQueue[frontIndex] = elementToInsert;
+    }
+
+    public int[] getElements()
+    {
+        return circularQueue;
     }
 }
