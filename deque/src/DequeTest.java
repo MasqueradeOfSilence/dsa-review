@@ -27,4 +27,10 @@ class DequeTest
         assertEquals(expectedFourthElement, actualFourthElement);
         assertEquals(expectedLastElement, actualLastElement);
     }
+
+    @org.junit.jupiter.api.Test
+    void insertRearShouldPutIntegerAtRearOfDeque()
+    {
+        
+    }
 }
