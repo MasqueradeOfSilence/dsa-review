@@ -31,6 +31,25 @@ class DequeTest
     @org.junit.jupiter.api.Test
     void insertRearShouldPutIntegerAtRearOfDeque()
     {
-        
+        int[] elements = { 7, 3, 1 };
+        Deque deque = new Deque(elements);
+        int elementToInsert = 5;
+        deque.insertRear(elementToInsert);
+        int[] actualElementsAfterAdd = deque.getElements();
+        int expectedFirstElement = 7;
+        int expectedSecondElement = 3;
+        int expectedThirdElement = 1;
+        int expectedFourthElement = elementToInsert;
+        int expectedFifthElement = Deque.EMPTY_SLOT;
+        int actualFirstElement = actualElementsAfterAdd[0];
+        int actualSecondElement = actualElementsAfterAdd[1];
+        int actualThirdElement = actualElementsAfterAdd[2];
+        int actualFourthElement = actualElementsAfterAdd[3];
+        int actualFifthElement = actualElementsAfterAdd[4];
+        assertEquals(expectedFirstElement, actualFirstElement);
+        assertEquals(expectedSecondElement, actualSecondElement);
+        assertEquals(expectedThirdElement, actualThirdElement);
+        assertEquals(expectedFourthElement, actualFourthElement);
+        assertEquals(expectedFifthElement, actualFifthElement);
     }
 }

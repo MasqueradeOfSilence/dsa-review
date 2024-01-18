@@ -74,6 +74,24 @@ public class Deque
         circularQueue[frontIndex] = elementToInsert;
     }
 
+    public void insertRear(int elementToInsert)
+    {
+        if (isFull())
+        {
+            rearIndex = 0;
+        }
+        else
+        {
+            rearIndex++;
+        }
+        circularQueue[rearIndex] = elementToInsert;
+    }
+
+    public boolean isFull()
+    {
+        return circularQueue.length - 1 >= MAX_SIZE;
+    }
+
     public int[] getElements()
     {
         return circularQueue;
