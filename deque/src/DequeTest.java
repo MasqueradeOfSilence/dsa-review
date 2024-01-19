@@ -52,4 +52,22 @@ class DequeTest
         assertEquals(expectedFourthElement, actualFourthElement);
         assertEquals(expectedFifthElement, actualFifthElement);
     }
+
+    @org.junit.jupiter.api.Test
+    void deleteFrontShouldRemoveValueAtFrontPointer()
+    {
+        int[] elements = { 7, 3, 1 };
+        Deque deque = new Deque(elements);
+        deque.deleteFront();
+        int expectedFirstElement = Deque.EMPTY_SLOT;
+        int expectedSecondElement = 3;
+        int expectedThirdElement = 1;
+        int[] actualElementsAfterDelete = deque.getElements();
+        int actualFirstElement = actualElementsAfterDelete[0];
+        int actualSecondElement = actualElementsAfterDelete[1];
+        int actualThirdElement = actualElementsAfterDelete[2];
+        assertEquals(expectedFirstElement, actualFirstElement);
+        assertEquals(expectedSecondElement, actualSecondElement);
+        assertEquals(expectedThirdElement, actualThirdElement);
+    }
 }

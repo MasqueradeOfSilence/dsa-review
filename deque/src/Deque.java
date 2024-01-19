@@ -87,7 +87,34 @@ public class Deque
         circularQueue[rearIndex] = elementToInsert;
     }
 
-    public boolean isFull()
+    public void deleteFront()
+    {
+        if (isEmpty())
+        {
+            return;
+        }
+        circularQueue[frontIndex] = EMPTY_SLOT;
+        if (frontIndex == rearIndex)
+        {
+            frontIndex = 0;
+            rearIndex = 0;
+        }
+        else if (frontIndex == MAX_SIZE - 1)
+        {
+            frontIndex = 0;
+        }
+        else
+        {
+            frontIndex++;
+        }
+    }
+
+    private boolean isEmpty()
+    {
+        return circularQueue.length == 0;
+    }
+
+    private boolean isFull()
     {
         return circularQueue.length - 1 >= MAX_SIZE;
     }
