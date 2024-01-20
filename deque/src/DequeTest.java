@@ -70,4 +70,10 @@ class DequeTest
         assertEquals(expectedSecondElement, actualSecondElement);
         assertEquals(expectedThirdElement, actualThirdElement);
     }
+
+    @org.junit.jupiter.api.Test
+    void deleteRearShouldRemoveValueAtRearPointer()
+    {
+
+    }
 }

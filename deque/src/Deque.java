@@ -109,6 +109,11 @@ public class Deque
         }
     }
 
+    public void deleteRear()
+    {
+        
+    }
+
     private boolean isEmpty()
     {
         return circularQueue.length == 0;
