@@ -23,7 +23,7 @@ import java.util.Arrays;
 public class Deque
 {
     // Arbitrary max size at which the circular queue is full.
-    private static final int MAX_SIZE = 100;
+    private static final int MAX_SIZE = 5;
     private int circularQueue[];
     private int frontIndex = 0;
     private int rearIndex = 0;
@@ -111,7 +111,24 @@ public class Deque
 
     public void deleteRear()
     {
-        
+        if (isEmpty())
+        {
+            return;
+        }
+        circularQueue[rearIndex] = EMPTY_SLOT;
+        if (frontIndex == rearIndex)
+        {
+            frontIndex = 0;
+            rearIndex = 0;
+        }
+        else if (rearIndex == 0)
+        {
+            rearIndex = MAX_SIZE - 1;
+        }
+        else
+        {
+            rearIndex--;
+        }
     }
 
     private boolean isEmpty()
@@ -127,5 +144,25 @@ public class Deque
     public int[] getElements()
     {
         return circularQueue;
+    }
+
+    public int getFrontIndex()
+    {
+        return frontIndex;
+    }
+
+    public int getRearIndex()
+    {
+        return rearIndex;
+    }
+
+    public void setFrontIndex(int frontIndex)
+    {
+        this.frontIndex = frontIndex;
+    }
+
+    public void setRearIndex(int rearIndex)
+    {
+        this.rearIndex = rearIndex;
     }
 }
