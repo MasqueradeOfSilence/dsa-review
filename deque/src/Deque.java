@@ -156,13 +156,4 @@ public class Deque
         return rearIndex;
     }
 
-    public void setFrontIndex(int frontIndex)
-    {
-        this.frontIndex = frontIndex;
-    }
-
-    public void setRearIndex(int rearIndex)
-    {
-        this.rearIndex = rearIndex;
-    }
 }
