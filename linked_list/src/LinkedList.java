@@ -6,5 +6,9 @@
 
 public class LinkedList
 {
-
+    static class Node
+    {
+        int value;
+        Node next;
+    }
 }
