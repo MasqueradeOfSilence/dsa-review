@@ -10,5 +10,11 @@ public class LinkedList
     {
         int value;
         Node next;
+
+        Node(int value)
+        {
+            this.value = value;
+            next = null;
+        }
     }
 }
