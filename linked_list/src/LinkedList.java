@@ -23,4 +23,9 @@ public class LinkedList
         }
     }
 
+    public void traverse()
+    {
+        
+    }
+
 }
