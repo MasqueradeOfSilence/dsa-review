@@ -25,7 +25,12 @@ public class LinkedList
 
     public void traverse()
     {
-        
+        Node temp = head;
+        while (temp != null)
+        {
+            System.out.println(temp.value);
+            temp = temp.next;
+        }
     }
 
 }
