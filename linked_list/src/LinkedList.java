@@ -25,10 +25,11 @@ public class LinkedList
 
     public void traverse()
     {
+        System.out.println("Traversing linked list!");
         Node temp = head;
         while (temp != null)
         {
-            System.out.println(temp.value);
+            System.out.println(temp.value + " -> ");
             temp = temp.next;
         }
     }
