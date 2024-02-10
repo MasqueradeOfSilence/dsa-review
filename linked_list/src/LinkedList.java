@@ -34,9 +34,11 @@ public class LinkedList
         }
     }
 
-    public void insertFront()
+    public void insertFront(int data)
     {
-        
+        Node newNode = new Node(data);
+        newNode.next = head;
+        head = newNode;
     }
 
 }
