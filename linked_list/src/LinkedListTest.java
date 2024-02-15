@@ -3,7 +3,7 @@ import static org.junit.jupiter.api.Assertions.*;
 class LinkedListTest {
 
     @org.junit.jupiter.api.BeforeEach
-    void setUp() 
+    void setUp()
     {
     }
 
@@ -20,5 +20,6 @@ class LinkedListTest {
     @org.junit.jupiter.api.Test
     void insertFront()
     {
+        int testData = 7;
     }
 }
