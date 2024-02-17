@@ -15,11 +15,14 @@ class LinkedListTest {
     @org.junit.jupiter.api.Test
     void traverse()
     {
+
     }
 
     @org.junit.jupiter.api.Test
     void insertFront()
     {
         int testData = 7;
+        LinkedList linkedList = new LinkedList();
+        linkedList.insertFront(testData);
     }
 }
