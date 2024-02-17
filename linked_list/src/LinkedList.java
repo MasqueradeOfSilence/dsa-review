@@ -41,4 +41,9 @@ public class LinkedList
         head = newNode;
     }
 
+    public Node getHead()
+    {
+        return head;
+    }
+
 }
