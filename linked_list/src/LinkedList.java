@@ -41,6 +41,11 @@ public class LinkedList
         head = newNode;
     }
 
+    public void insertEnd(int data)
+    {
+        
+    }
+
     public Node getHead()
     {
         return head;
