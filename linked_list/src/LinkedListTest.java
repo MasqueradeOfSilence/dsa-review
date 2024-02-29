@@ -34,4 +34,10 @@ class LinkedListTest
         int expectedHeadValue = 7;
         assertEquals(head.value, expectedHeadValue);
     }
+
+    @org.junit.jupiter.api.Test
+    void insertEnd()
+    {
+
+    }
 }
