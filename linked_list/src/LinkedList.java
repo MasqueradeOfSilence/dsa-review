@@ -43,6 +43,7 @@ public class LinkedList
 
     public void insertEnd(int data)
     {
+        Node newNode = new Node(data);
         
     }
 
