@@ -40,6 +40,10 @@ class LinkedListTest
     {
         int testData = 7;
         LinkedList linkedList = new LinkedList();
+        linkedList.insertFront(12);
+        linkedList.insertFront(17);
+        linkedList.insertFront(1924);
+        linkedList.insertFront(666);
         linkedList.insertEnd(testData);
     }
 }
