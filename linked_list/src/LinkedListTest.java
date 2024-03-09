@@ -38,6 +38,8 @@ class LinkedListTest
     @org.junit.jupiter.api.Test
     void insertEnd()
     {
-
+        int testData = 7;
+        LinkedList linkedList = new LinkedList();
+        linkedList.insertEnd(testData);
     }
 }
