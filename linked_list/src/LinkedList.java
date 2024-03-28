@@ -57,4 +57,10 @@ public class LinkedList
         return head;
     }
 
+    public Node getTail()
+    {
+        // TODO
+        return null;
+    }
+
 }
