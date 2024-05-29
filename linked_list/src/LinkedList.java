@@ -60,7 +60,12 @@ public class LinkedList
     public Node getTail()
     {
         // TODO
-        return null;
+        Node current = head;
+        while(current.next != null)
+        {
+            current = current.next;
+        }
+        return current;
     }
 
 }
