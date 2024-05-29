@@ -34,4 +34,18 @@ class LinkedListTest
         int expectedHeadValue = 7;
         assertEquals(head.value, expectedHeadValue);
     }
+
+    @org.junit.jupiter.api.Test
+    void insertEnd()
+    {
+        int testData = 7;
+        LinkedList linkedList = new LinkedList();
+        linkedList.insertFront(12);
+        linkedList.insertFront(17);
+        linkedList.insertFront(1924);
+        linkedList.insertFront(666);
+        linkedList.insertEnd(testData);
+        LinkedList.Node head = linkedList.getHead();
+        // traverse to tail
+    }
 }

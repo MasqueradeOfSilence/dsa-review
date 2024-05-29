@@ -43,12 +43,24 @@ public class LinkedList
 
     public void insertEnd(int data)
     {
-
+        Node newNode = new Node(data);
+        Node current = head;
+        while(current.next != null)
+        {
+            current = current.next;
+        }
+        current.next = newNode;
     }
 
     public Node getHead()
     {
         return head;
+    }
+
+    public Node getTail()
+    {
+        // TODO
+        return null;
     }
 
 }
