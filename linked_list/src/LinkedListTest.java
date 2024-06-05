@@ -45,7 +45,11 @@ class LinkedListTest
         linkedList.insertFront(1924);
         linkedList.insertFront(666);
         linkedList.insertEnd(testData);
+        int expectedHeadValue = 666;
+        int expectedTailValue = 7;
         LinkedList.Node head = linkedList.getHead();
-        // traverse to tail
+        LinkedList.Node tail = linkedList.getTail();
+        assertEquals(head.value, expectedHeadValue);
+        assertEquals(tail.value, expectedTailValue);
     }
 }
