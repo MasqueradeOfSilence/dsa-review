@@ -52,6 +52,21 @@ public class LinkedList
         current.next = newNode;
     }
 
+    public void insertAt(int position, int data)
+    {
+        Node current = head;
+        Node newNode = new Node(data);
+        for (int i = 0; i < position - 1; i++)
+        {
+            if (current.next != null)
+            {
+                current = current.next;
+            }
+        }
+        newNode.next = current.next;
+        current.next = newNode;
+    }
+
     public Node getHead()
     {
         return head;
@@ -59,7 +74,6 @@ public class LinkedList
 
     public Node getTail()
     {
-        // TODO
         Node current = head;
         while(current.next != null)
         {

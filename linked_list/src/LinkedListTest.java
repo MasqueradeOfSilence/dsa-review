@@ -52,4 +52,22 @@ class LinkedListTest
         assertEquals(head.value, expectedHeadValue);
         assertEquals(tail.value, expectedTailValue);
     }
+
+    @org.junit.jupiter.api.Test
+    void insertMiddle()
+    {
+        int positionToInsertAt = 3;
+        int testData = 7;
+        LinkedList linkedList = new LinkedList();
+        linkedList.insertFront(12);
+        linkedList.insertFront(17);
+        linkedList.insertFront(1924);
+        linkedList.insertFront(666);
+        linkedList.insertFront(332);
+        linkedList.insertFront(24);
+        linkedList.insertFront(25);
+        linkedList.insertAt(positionToInsertAt, testData);
+        // Expected order: 25 -> 24 -> 332 -> 7 -> 666 -> 1924 -> 17 -> 12
+        linkedList.traverse();
+    }
 }
