@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/circular_queue/circular_queue.iml" filepath="$PROJECT_DIR$/circular_queue/circular_queue.iml" />
       <module fileurl="file://$PROJECT_DIR$/deque/deque.iml" filepath="$PROJECT_DIR$/deque/deque.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/dsa-review.iml" filepath="$PROJECT_DIR$/.idea/dsa-review.iml" />
       <module fileurl="file://$PROJECT_DIR$/linked_list/linked_list.iml" filepath="$PROJECT_DIR$/linked_list/linked_list.iml" />
