@@ -10,4 +10,15 @@ public class CircularQueue
     private int currentRearPosition = -1;
     private int QUEUE_SIZE = 10;
     private int items[] = new int[QUEUE_SIZE];
+
+    public boolean isFull()
+    {
+        return false;
+    }
+
+    public boolean isEmpty()
+    {
+        return currentFrontPosition == -1;
+    }
+
 }
