@@ -21,4 +21,9 @@ public class CircularQueue
         return currentFrontPosition == -1;
     }
 
+    public void enQueue(int element)
+    {
+        
+    }
+
 }
