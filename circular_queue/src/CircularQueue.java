@@ -1,7 +1,9 @@
 /**
  * My implementation of a circular queue
  *
- * Do not use lists
+ * Complexity is O(1) for array implementations.
+ *
+ * Do not use lists!
  */
 
 public class CircularQueue
