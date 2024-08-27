@@ -25,7 +25,21 @@ public class CircularQueue
 
     public void enQueue(int element)
     {
-        
+        if (isFull())
+        {
+            System.out.println("Oops! The queue is full. That really sucks for you");
+        }
+        else
+        {
+            // Loop around
+            if (currentFrontPosition == -1)
+            {
+                currentFrontPosition = 0;
+            }
+            currentRearPosition = (currentRearPosition + 1) % QUEUE_SIZE;
+            items[currentRearPosition] = element;
+            System.out.println("Successfully added " + element + ". Love that for you");
+        }
     }
 
 }
