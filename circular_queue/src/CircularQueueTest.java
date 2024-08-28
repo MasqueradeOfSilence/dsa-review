@@ -15,6 +15,17 @@ class CircularQueueTest
         int eighthItem = 24;
         int ninthItem = 25;
         int tenthItem = 444;
+        CircularQueue circularQueue = new CircularQueue();
+        circularQueue.enqueue(firstItem);
+        circularQueue.enqueue(secondItem);
+        circularQueue.enqueue(thirdItem);
+        circularQueue.enqueue(fourthItem);
+        circularQueue.enqueue(fifthItem);
+        circularQueue.enqueue(sixthItem);
+        circularQueue.enqueue(seventhItem);
+        circularQueue.enqueue(eighthItem);
+        circularQueue.enqueue(ninthItem);
+        circularQueue.enqueue(tenthItem);
         
     }
 

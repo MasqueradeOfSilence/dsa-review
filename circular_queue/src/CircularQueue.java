@@ -23,7 +23,7 @@ public class CircularQueue
         return currentFrontPosition == -1;
     }
 
-    public void enQueue(int element)
+    public void enqueue(int element)
     {
         if (isFull())
         {
@@ -31,9 +31,9 @@ public class CircularQueue
         }
         else
         {
-            // Loop around
             if (currentFrontPosition == -1)
             {
+                // Loop around
                 currentFrontPosition = 0;
             }
             currentRearPosition = (currentRearPosition + 1) % QUEUE_SIZE;
