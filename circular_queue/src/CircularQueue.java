@@ -15,6 +15,14 @@ public class CircularQueue
 
     public boolean isFull()
     {
+        if (currentFrontPosition == 0 && currentRearPosition == QUEUE_SIZE - 1)
+        {
+            return true;
+        }
+        if (currentFrontPosition == currentRearPosition + 1)
+        {
+            return true;
+        }
         return false;
     }
 

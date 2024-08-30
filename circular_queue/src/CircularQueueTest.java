@@ -26,7 +26,8 @@ class CircularQueueTest
         circularQueue.enqueue(eighthItem);
         circularQueue.enqueue(ninthItem);
         circularQueue.enqueue(tenthItem);
-        
+        boolean isFull = circularQueue.isFull();
+        assertTrue(isFull);
     }
 
     @org.junit.jupiter.api.Test
