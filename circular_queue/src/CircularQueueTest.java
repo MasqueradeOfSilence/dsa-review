@@ -33,7 +33,9 @@ class CircularQueueTest
     @org.junit.jupiter.api.Test
     void isEmpty()
     {
-        
+        CircularQueue circularQueue = new CircularQueue();
+        boolean isEmpty = circularQueue.isEmpty();
+        assertTrue(isEmpty);
     }
 
 }
