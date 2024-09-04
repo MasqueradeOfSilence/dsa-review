@@ -16,6 +16,8 @@ class CircularQueueTest
         int ninthItem = 25;
         int tenthItem = 444;
         CircularQueue circularQueue = new CircularQueue();
+        boolean isFull = circularQueue.isFull();
+        assertFalse(isFull);
         circularQueue.enqueue(firstItem);
         circularQueue.enqueue(secondItem);
         circularQueue.enqueue(thirdItem);
@@ -26,7 +28,7 @@ class CircularQueueTest
         circularQueue.enqueue(eighthItem);
         circularQueue.enqueue(ninthItem);
         circularQueue.enqueue(tenthItem);
-        boolean isFull = circularQueue.isFull();
+        isFull = circularQueue.isFull();
         assertTrue(isFull);
     }
 
@@ -36,6 +38,14 @@ class CircularQueueTest
         CircularQueue circularQueue = new CircularQueue();
         boolean isEmpty = circularQueue.isEmpty();
         assertTrue(isEmpty);
+    }
+
+    @org.junit.jupiter.api.Test
+    void enqueue()
+    {
+        CircularQueue circularQueue = new CircularQueue();
+        circularQueue.enqueue(1924);
+        // TODO test something here
     }
 
 }
