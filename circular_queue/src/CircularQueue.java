@@ -31,6 +31,14 @@ public class CircularQueue
         return currentFrontPosition == -1;
     }
 
+    public int getFirstElement() {
+        return items[currentFrontPosition];
+    }
+
+    public int getLastElement() {
+        return items[currentRearPosition];
+    }
+
     public void enqueue(int element)
     {
         if (isFull())

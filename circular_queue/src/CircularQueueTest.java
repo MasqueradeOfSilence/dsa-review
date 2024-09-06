@@ -45,7 +45,10 @@ class CircularQueueTest
     {
         CircularQueue circularQueue = new CircularQueue();
         circularQueue.enqueue(1924);
-        // TODO test something here
+        int firstElement = circularQueue.getFirstElement();
+        int lastElement = circularQueue.getLastElement();
+        assertEquals(firstElement, 1924);
+        assertEquals(lastElement, 1924);
     }
 
 }
