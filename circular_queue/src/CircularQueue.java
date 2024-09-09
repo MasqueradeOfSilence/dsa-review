@@ -58,4 +58,9 @@ public class CircularQueue
         }
     }
 
+    public int dequeue()
+    {
+        return -1;
+    }
+
 }

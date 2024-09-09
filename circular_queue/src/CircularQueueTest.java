@@ -51,4 +51,13 @@ class CircularQueueTest
         assertEquals(lastElement, 1924);
     }
 
+    @org.junit.jupiter.api.Test
+    void dequeue()
+    {
+        CircularQueue circularQueue = new CircularQueue();
+        circularQueue.enqueue(1924);
+        circularQueue.enqueue(6);
+        // TODO length check and dequeue
+    }
+
 }
