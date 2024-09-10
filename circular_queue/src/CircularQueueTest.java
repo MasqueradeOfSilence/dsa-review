@@ -58,6 +58,7 @@ class CircularQueueTest
         circularQueue.enqueue(1924);
         circularQueue.enqueue(6);
         // TODO length check and dequeue
+
     }
 
 }

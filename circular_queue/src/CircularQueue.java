@@ -63,4 +63,9 @@ public class CircularQueue
         return -1;
     }
 
+    public int getLength()
+    {
+        return -1;
+    }
+
 }
