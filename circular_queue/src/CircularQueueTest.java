@@ -61,4 +61,10 @@ class CircularQueueTest
 
     }
 
+    @org.junit.jupiter.api.Test
+    void getLength()
+    {
+        // We have to know that this works so we can rely on the results of the dequeue test 
+    }
+
 }
