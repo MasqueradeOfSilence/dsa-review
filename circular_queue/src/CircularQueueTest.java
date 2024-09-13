@@ -64,7 +64,19 @@ class CircularQueueTest
     @org.junit.jupiter.api.Test
     void getLength()
     {
-        // We have to know that this works so we can rely on the results of the dequeue test 
+        // We have to know that this works so we can rely on the results of the dequeue test
+        CircularQueue circularQueue = new CircularQueue();
+        int firstItem = 5;
+        int secondItem = 4;
+        int thirdItem = 0;
+        int fourthItem = 6;
+        circularQueue.enqueue(firstItem);
+        circularQueue.enqueue(secondItem);
+        circularQueue.enqueue(thirdItem);
+        circularQueue.enqueue(fourthItem);
+        int expectedLength = 4;
+        int actualLength = circularQueue.getLength();
+        assertEquals(expectedLength, actualLength);
     }
 
 }
