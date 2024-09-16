@@ -65,7 +65,8 @@ public class CircularQueue
 
     public int getLength()
     {
-        return -1;
+        return currentFrontPosition > currentRearPosition ? (QUEUE_SIZE - currentFrontPosition
+                + currentRearPosition + 1) : (currentRearPosition - currentFrontPosition + 1);
     }
 
 }
