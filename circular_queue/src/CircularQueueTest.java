@@ -58,7 +58,13 @@ class CircularQueueTest
         circularQueue.enqueue(1924);
         circularQueue.enqueue(6);
         // TODO length check and dequeue
-
+        int expectedOriginalLength = 2;
+        int actualOriginalLength = circularQueue.getLength();
+        assertEquals(expectedOriginalLength, actualOriginalLength);
+        circularQueue.dequeue();
+        int expectedFinalLength = 1;
+        int actualFinalLength = 1;
+        assertEquals(expectedFinalLength, actualFinalLength);
     }
 
     @org.junit.jupiter.api.Test
