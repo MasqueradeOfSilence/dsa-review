@@ -60,6 +60,12 @@ public class CircularQueue
 
     public int dequeue()
     {
+        int elementToRemove;
+        if (isEmpty())
+        {
+            System.out.println("Nothing to dequeue");
+            return -1;
+        }
         return -1;
     }
 
