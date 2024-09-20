@@ -57,7 +57,6 @@ class CircularQueueTest
         CircularQueue circularQueue = new CircularQueue();
         circularQueue.enqueue(1924);
         circularQueue.enqueue(6);
-        // TODO length check and dequeue
         int expectedOriginalLength = 2;
         int actualOriginalLength = circularQueue.getLength();
         assertEquals(expectedOriginalLength, actualOriginalLength);
