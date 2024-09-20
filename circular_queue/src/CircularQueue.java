@@ -60,13 +60,23 @@ public class CircularQueue
 
     public int dequeue()
     {
-        int elementToRemove;
         if (isEmpty())
         {
             System.out.println("Nothing to dequeue");
             return -1;
         }
-        return -1;
+        int elementToRemove = items[currentFrontPosition];
+        // Reset queue
+        if (currentFrontPosition == currentRearPosition)
+        {
+            currentFrontPosition = -1;
+            currentRearPosition = -1;
+        }
+        else
+        {
+            currentFrontPosition = (currentFrontPosition + 1) % QUEUE_SIZE;
+        }
+        return elementToRemove;
     }
 
     public int getLength()
