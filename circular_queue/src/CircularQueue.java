@@ -85,4 +85,9 @@ public class CircularQueue
                 + currentRearPosition + 1) : (currentRearPosition - currentFrontPosition + 1);
     }
 
+    public void print()
+    {
+        
+    }
+
 }
