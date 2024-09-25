@@ -84,4 +84,32 @@ class CircularQueueTest
         assertEquals(expectedLength, actualLength);
     }
 
+    @org.junit.jupiter.api.Test
+    void print()
+    {
+        int firstItem = 5;
+        int secondItem = 4;
+        int thirdItem = 0;
+        int fourthItem = 6;
+        int fifthItem = 123456;
+        int sixthItem = 666;
+        int seventhItem = 1924;
+        int eighthItem = 24;
+        int ninthItem = 25;
+        int tenthItem = 444;
+        CircularQueue circularQueue = new CircularQueue();
+        circularQueue.enqueue(firstItem);
+        circularQueue.enqueue(secondItem);
+        circularQueue.enqueue(thirdItem);
+        circularQueue.enqueue(fourthItem);
+        circularQueue.enqueue(fifthItem);
+        circularQueue.enqueue(sixthItem);
+        circularQueue.enqueue(seventhItem);
+        circularQueue.enqueue(eighthItem);
+        circularQueue.enqueue(ninthItem);
+        circularQueue.enqueue(tenthItem);
+        // visual test
+        circularQueue.print();
+    }
+
 }

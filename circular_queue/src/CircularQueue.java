@@ -87,7 +87,16 @@ public class CircularQueue
 
     public void print()
     {
-        
+        if (isEmpty())
+        {
+            System.out.println("Empty queue: []");
+            return;
+        }
+        for (int i = currentFrontPosition; i != currentRearPosition; i = (i + 1) % QUEUE_SIZE)
+        {
+            System.out.println(items[i] + " ");
+        }
+        System.out.println(items[currentRearPosition]);
     }
 
 }
