@@ -70,4 +70,11 @@ class LinkedListTest
         // Expected order: 25 -> 24 -> 332 -> 7 -> 666 -> 1924 -> 17 -> 12
         linkedList.traverse();
     }
+
+    @org.junit.jupiter.api.Test
+    void deleteBeginning()
+    {
+        
+    }
+
 }
