@@ -72,7 +72,7 @@ class LinkedListTest
     }
 
     @org.junit.jupiter.api.Test
-    void deleteBeginning()
+    void deleteFront()
     {
         
     }

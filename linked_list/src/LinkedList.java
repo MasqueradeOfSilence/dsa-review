@@ -82,4 +82,9 @@ public class LinkedList
         return current;
     }
 
+    public void deleteFront()
+    {
+        
+    }
+
 }
