@@ -87,4 +87,14 @@ public class LinkedList
         
     }
 
+    public void deleteRear()
+    {
+
+    }
+
+    public void deleteMiddle()
+    {
+
+    }
+
 }
