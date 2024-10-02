@@ -97,4 +97,12 @@ public class LinkedList
 
     }
 
+    /*
+        We should be able to delete any of the cases above based on conditions
+    */
+    public void delete()
+    {
+
+    }
+
 }

@@ -86,7 +86,7 @@ class LinkedListTest
     @org.junit.jupiter.api.Test
     void deleteMiddle()
     {
-        
+
     }
 
 }
