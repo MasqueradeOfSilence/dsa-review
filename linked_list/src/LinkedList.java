@@ -84,7 +84,8 @@ public class LinkedList
 
     public void deleteFront()
     {
-        
+        // wip
+        head = head.next;
     }
 
     public void deleteRear()
