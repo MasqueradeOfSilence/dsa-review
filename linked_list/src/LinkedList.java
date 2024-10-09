@@ -84,13 +84,19 @@ public class LinkedList
 
     public void deleteFront()
     {
-        // wip
+        // detach the first node and attach head to second node
         head = head.next;
     }
 
     public void deleteRear()
     {
-
+        Node current = head;
+        // Traverse to second-to-last node, and disconnect it
+        while (current.next.next != null)
+        {
+            current = current.next;
+        }
+        current.next = null;
     }
 
     public void deleteMiddle()

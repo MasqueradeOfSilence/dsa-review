@@ -74,7 +74,7 @@ class LinkedListTest
     @org.junit.jupiter.api.Test
     void deleteFront()
     {
-        
+        LinkedList linkedList = new LinkedList();
     }
 
     @org.junit.jupiter.api.Test
