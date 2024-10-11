@@ -77,7 +77,11 @@ class LinkedListTest
         LinkedList linkedList = new LinkedList();
         linkedList.insertFront(12);
         linkedList.insertFront(17);
+        LinkedList.Node head = linkedList.getHead();
+        LinkedList.Node tail = linkedList.getTail();
+
         
+        linkedList.deleteFront();
     }
 
     @org.junit.jupiter.api.Test
