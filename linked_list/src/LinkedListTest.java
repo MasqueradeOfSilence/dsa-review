@@ -79,8 +79,8 @@ class LinkedListTest
         linkedList.insertFront(17);
         LinkedList.Node head = linkedList.getHead();
         LinkedList.Node tail = linkedList.getTail();
+        assertEquals(head.value, 12);
 
-        
         linkedList.deleteFront();
     }
 
