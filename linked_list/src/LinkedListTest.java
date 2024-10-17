@@ -81,8 +81,11 @@ class LinkedListTest
         LinkedList.Node tail = linkedList.getTail();
         assertEquals(head.value, 17);
         assertEquals(tail.value, 12);
-
         linkedList.deleteFront();
+        head = linkedList.getHead();
+        tail = linkedList.getTail();
+        assertEquals(head.value, 12);
+        assertEquals(tail.value, 12);
     }
 
     @org.junit.jupiter.api.Test
