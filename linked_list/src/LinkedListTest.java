@@ -91,7 +91,19 @@ class LinkedListTest
     @org.junit.jupiter.api.Test
     void deleteRear()
     {
-
+        LinkedList linkedList = new LinkedList();
+        linkedList.insertFront(12);
+        linkedList.insertFront(17);
+        linkedList.insertFront(666);
+        LinkedList.Node head = linkedList.getHead();
+        LinkedList.Node tail = linkedList.getTail();
+        assertEquals(head.value, 666);
+        assertEquals(tail.value, 12);
+        linkedList.deleteRear();
+        head = linkedList.getHead();
+        tail = linkedList.getTail();
+        assertEquals(head.value, 666);
+        assertEquals(tail.value, 17);
     }
 
     @org.junit.jupiter.api.Test
