@@ -99,9 +99,12 @@ public class LinkedList
         current.next = null;
     }
 
-    public void deleteMiddle()
+    public void deleteMiddle(int position)
     {
-
+        for (int i = 2; i < position; i++)
+        {
+            
+        }
     }
 
     /*
