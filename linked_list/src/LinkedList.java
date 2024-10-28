@@ -103,7 +103,8 @@ public class LinkedList
     {
         for (int i = 2; i < position; i++)
         {
-            
+            // I think Programiz starts at 2 for the head position being considered 1
+            // TBD, going to need to look at this more to see if 1 or 2 makes more sense
         }
     }
 
