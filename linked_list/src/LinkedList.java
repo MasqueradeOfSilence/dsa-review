@@ -101,11 +101,19 @@ public class LinkedList
 
     public void deleteMiddle(int position)
     {
+        Node temp = head;
         for (int i = 2; i < position; i++)
         {
             // I think Programiz starts at 2 for the head position being considered 1
             // TBD, going to need to look at this more to see if 1 or 2 makes more sense
+            if (temp.next != null)
+            {
+                temp = temp.next;
+            }
         }
+        // Detaching
+        assert temp.next != null;
+        temp.next = temp.next.next;
     }
 
     /*
