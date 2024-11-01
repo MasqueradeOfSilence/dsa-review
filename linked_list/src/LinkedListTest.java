@@ -109,7 +109,24 @@ class LinkedListTest
     @org.junit.jupiter.api.Test
     void deleteMiddle()
     {
+        LinkedList linkedList = new LinkedList();
+        linkedList.insertFront(12);
+        linkedList.insertFront(17);
+        linkedList.insertFront(666);
+        LinkedList.Node head = linkedList.getHead();
+        LinkedList.Node tail = linkedList.getTail();
+        assertEquals(head.value, 666);
+        assertEquals(tail.value, 12);
+        linkedList.traverse();
 
+        // Deleting assuming index 0 is the first one
+        linkedList.deleteMiddle(1);
+        head = linkedList.getHead();
+        tail = linkedList.getTail();
+        assertEquals(head.value, 666);
+        assertEquals(tail.value, 12);
+
+        linkedList.traverse();
     }
 
     @org.junit.jupiter.api.Test

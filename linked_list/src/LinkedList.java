@@ -106,7 +106,6 @@ public class LinkedList
         {
             // If you expect position to be 0-indexed, i should start at 1
             // since i is not used to explicitly index, we need to think of it in terms of how many times we want to loop
-            // will check in tests
             if (temp.next != null)
             {
                 temp = temp.next;
