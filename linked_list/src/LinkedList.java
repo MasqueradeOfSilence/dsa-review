@@ -119,9 +119,19 @@ public class LinkedList
     /*
         We should be able to delete any of the cases above based on conditions
     */
-    public void delete()
+    public void delete(int position)
     {
-
+        if (head == null)
+        {
+            return;
+        }
+        Node temp = head;
+        if (position == 0)
+        {
+            deleteFront();
+            return;
+        }
+        
     }
 
 }
