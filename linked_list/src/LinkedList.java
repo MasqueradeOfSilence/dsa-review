@@ -131,7 +131,7 @@ public class LinkedList
             deleteFront();
             return;
         }
-        
+        deleteMiddle(position);
     }
 
 }
