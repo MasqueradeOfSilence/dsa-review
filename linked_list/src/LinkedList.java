@@ -125,13 +125,18 @@ public class LinkedList
         {
             return;
         }
-        Node temp = head;
         if (position == 0)
         {
             deleteFront();
             return;
         }
         deleteMiddle(position);
+    }
+
+    public boolean searchForNodeWithValue(int value)
+    {
+        // TODO fill out
+        return false;
     }
 
 }
