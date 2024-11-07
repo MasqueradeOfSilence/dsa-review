@@ -147,4 +147,10 @@ class LinkedListTest
         assertEquals(tail.value, 17);
     }
 
+    @org.junit.jupiter.api.Test
+    void searchForNodeWithValue()
+    {
+        
+    }
+
 }
