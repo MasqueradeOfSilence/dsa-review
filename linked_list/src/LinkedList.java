@@ -135,7 +135,15 @@ public class LinkedList
 
     public boolean searchForNodeWithValue(int value)
     {
-        // TODO fill out
+        Node current = head;
+        while (current != null)
+        {
+            if (current.value == value)
+            {
+                return true;
+            }
+            current = current.next;
+        }
         return false;
     }
 
