@@ -150,7 +150,16 @@ class LinkedListTest
     @org.junit.jupiter.api.Test
     void searchForNodeWithValue()
     {
-        
+        int valueThatShouldExist = 666;
+        int valueThatShouldNotExist = 667;
+        LinkedList linkedList = new LinkedList();
+        linkedList.insertFront(12);
+        linkedList.insertFront(17);
+        linkedList.insertFront(666);
+        boolean expectedValueFound = linkedList.searchForNodeWithValue(valueThatShouldExist);
+        assertTrue(expectedValueFound);
+        boolean nonExistentValueFound = linkedList.searchForNodeWithValue(valueThatShouldNotExist);
+        assertFalse(nonExistentValueFound);
     }
 
 }
