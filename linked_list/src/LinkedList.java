@@ -147,4 +147,9 @@ public class LinkedList
         return false;
     }
 
+    public void sort()
+    {
+        
+    }
+
 }

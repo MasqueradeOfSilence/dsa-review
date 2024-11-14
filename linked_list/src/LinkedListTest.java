@@ -162,4 +162,10 @@ class LinkedListTest
         assertFalse(nonExistentValueFound);
     }
 
+    @org.junit.jupiter.api.Test
+    void sort()
+    {
+
+    }
+
 }
