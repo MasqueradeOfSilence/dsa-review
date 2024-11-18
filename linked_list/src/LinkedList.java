@@ -149,7 +149,9 @@ public class LinkedList
 
     public void sort()
     {
-        
+        Node current = head;
+        Node subsequent = null;
+        int tempData;
     }
 
 }
