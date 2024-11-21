@@ -147,11 +147,24 @@ public class LinkedList
         return false;
     }
 
+    // Bubble sort
     public void sort()
     {
+        if (head == null)
+        {
+            return;
+        }
         Node current = head;
         Node subsequent = null;
         int tempData;
+        while (current != null)
+        {
+            subsequent = current.next;
+            while (subsequent != null)
+            {
+                
+            }
+        }
     }
 
 }
