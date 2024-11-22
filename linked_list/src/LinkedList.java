@@ -162,8 +162,15 @@ public class LinkedList
             subsequent = current.next;
             while (subsequent != null)
             {
-                
+                if (current.value > subsequent.value)
+                {
+                    tempData = current.value;
+                    current.value = subsequent.value;
+                    subsequent.value = tempData;
+                }
+                subsequent = current.next;
             }
+            current = current.next;
         }
     }
 
