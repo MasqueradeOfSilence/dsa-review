@@ -168,7 +168,7 @@ public class LinkedList
                     current.value = subsequent.value;
                     subsequent.value = tempData;
                 }
-                subsequent = current.next;
+                subsequent = subsequent.next;
             }
             current = current.next;
         }
