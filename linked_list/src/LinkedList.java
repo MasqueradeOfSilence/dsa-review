@@ -147,7 +147,7 @@ public class LinkedList
         return false;
     }
 
-    // Bubble sort
+    // Bubble sort, ascending order
     public void sort()
     {
         if (head == null)

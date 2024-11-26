@@ -165,7 +165,19 @@ class LinkedListTest
     @org.junit.jupiter.api.Test
     void sort()
     {
-
+        LinkedList linkedList = new LinkedList();
+        linkedList.insertFront(17);
+        linkedList.insertFront(12);
+        linkedList.insertFront(666);
+        LinkedList.Node head = linkedList.getHead();
+        LinkedList.Node tail = linkedList.getTail();
+        assertEquals(head.value, 666);
+        assertEquals(tail.value, 17);
+        linkedList.sort();
+        head = linkedList.getHead();
+        tail = linkedList.getTail();
+        assertEquals(head.value, 12);
+        assertEquals(tail.value, 666);
     }
 
 }
