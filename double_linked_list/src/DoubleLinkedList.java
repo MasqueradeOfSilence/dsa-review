@@ -19,4 +19,9 @@ public class DoubleLinkedList
             previous = null;
         }
     }
+
+    public void insertFront(int data)
+    {
+
+    }
 }
