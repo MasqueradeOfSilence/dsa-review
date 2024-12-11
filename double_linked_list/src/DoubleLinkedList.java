@@ -22,6 +22,13 @@ public class DoubleLinkedList
 
     public void insertFront(int data)
     {
-
+        Node newNode = new Node(data);
+        newNode.next = head;
+        newNode.previous = null;
+        if (head != null)
+        {
+            head.previous = newNode;
+        }
+        head = newNode;
     }
 }
