@@ -10,6 +10,7 @@ class DoubleLinkedListTest
         int data2 = 1924;
         dll.insertFront(data1);
         dll.insertFront(data2);
-        
+        int front = dll.getFront();
+        assertEquals(front, data2);
     }
 }

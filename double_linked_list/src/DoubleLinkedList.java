@@ -31,4 +31,13 @@ public class DoubleLinkedList
         }
         head = newNode;
     }
+
+    public int getFront()
+    {
+        if (head == null)
+        {
+            return -1;
+        }
+        return head.value;
+    }
 }
