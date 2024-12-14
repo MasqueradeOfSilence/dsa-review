@@ -32,6 +32,11 @@ public class DoubleLinkedList
         head = newNode;
     }
 
+    public void insertAfter(Node prev, int data)
+    {
+        
+    }
+
     public int getFront()
     {
         if (head == null)

@@ -13,4 +13,10 @@ class DoubleLinkedListTest
         int front = dll.getFront();
         assertEquals(front, data2);
     }
+
+    @org.junit.jupiter.api.Test
+    void insertAfter()
+    {
+        
+    }
 }
