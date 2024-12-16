@@ -37,12 +37,12 @@ public class DoubleLinkedList
         if (prev == null)
         {
             System.out.println("Error: prev cannot be null");
+            return;
         }
         Node newNode = new Node(data);
-        // TODO check ordering
-        newNode.previous = prev;
         newNode.next = prev.next;
         prev.next = newNode;
+        newNode.previous = prev;
     }
 
     public int getFront()
