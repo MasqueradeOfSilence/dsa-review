@@ -34,7 +34,15 @@ public class DoubleLinkedList
 
     public void insertAfter(Node prev, int data)
     {
-        
+        if (prev == null)
+        {
+            System.out.println("Error: prev cannot be null");
+        }
+        Node newNode = new Node(data);
+        // TODO check ordering
+        newNode.previous = prev;
+        newNode.next = prev.next;
+        prev.next = newNode;
     }
 
     public int getFront()

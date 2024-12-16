@@ -17,6 +17,6 @@ class DoubleLinkedListTest
     @org.junit.jupiter.api.Test
     void insertAfter()
     {
-        
+
     }
 }
