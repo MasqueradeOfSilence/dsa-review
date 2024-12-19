@@ -33,4 +33,10 @@ class DoubleLinkedListTest
         assertEquals(dll.head.next.next.value, data1);
         assertEquals(dll.head.next.next.next.value, data4);
     }
+
+    @org.junit.jupiter.api.Test
+    void insertEnd(int data)
+    {
+        
+    }
 }

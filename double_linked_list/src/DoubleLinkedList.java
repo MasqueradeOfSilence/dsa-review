@@ -45,6 +45,11 @@ public class DoubleLinkedList
         newNode.previous = prev;
     }
 
+    public void insertEnd(int data)
+    {
+        
+    }
+
     public int getFront()
     {
         if (head == null)
