@@ -35,8 +35,16 @@ class DoubleLinkedListTest
     }
 
     @org.junit.jupiter.api.Test
-    void insertEnd(int data)
+    void insertEnd()
     {
-        
+        DoubleLinkedList dll = new DoubleLinkedList();
+        int data1 = 6;
+        int data2 = 1924;
+        int data3 = 666;
+        int data4 = 444;
+        dll.insertFront(data1);
+        dll.insertFront(data2);
+        dll.insertFront(data3);
+        dll.insertEnd(444);
     }
 }
