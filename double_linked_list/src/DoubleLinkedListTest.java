@@ -45,6 +45,6 @@ class DoubleLinkedListTest
         dll.insertFront(data1);
         dll.insertFront(data2);
         dll.insertFront(data3);
-        dll.insertEnd(444);
+        dll.insertEnd(data4);
     }
 }
