@@ -48,6 +48,8 @@ public class DoubleLinkedList
     public void insertEnd(int data)
     {
         Node newNode = new Node(data);
+        Node temp = head;
+        newNode.next = null;
         
     }
 
