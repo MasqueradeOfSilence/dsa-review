@@ -50,7 +50,19 @@ public class DoubleLinkedList
         Node newNode = new Node(data);
         Node temp = head;
         newNode.next = null;
-        
+        if (head == null)
+        {
+            newNode.previous = null;
+            head = newNode;
+            return;
+        }
+        while (temp.next != null)
+        {
+            // Go to the end
+            temp = temp.next;
+        }
+        temp.next = newNode;
+        newNode.previous = temp;
     }
 
     public int getFront()
