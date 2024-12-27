@@ -44,7 +44,11 @@ class DoubleLinkedListTest
         int data4 = 444;
         dll.insertFront(data1);
         dll.insertFront(data2);
-        dll.insertFront(data3);
         dll.insertEnd(data4);
+        dll.insertFront(data3);
+        assertEquals(dll.head.value, data3);
+        assertEquals(dll.head.next.value, data2);
+        assertEquals(dll.head.next.next.value, data1);
+        assertEquals(dll.head.next.next.next.value, data4);
     }
 }
