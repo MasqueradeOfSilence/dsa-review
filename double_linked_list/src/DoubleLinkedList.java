@@ -65,6 +65,11 @@ public class DoubleLinkedList
         newNode.previous = temp;
     }
 
+    public void deleteNode(Node nodeToDelete)
+    {
+
+    }
+
     public int getFront()
     {
         if (head == null)
