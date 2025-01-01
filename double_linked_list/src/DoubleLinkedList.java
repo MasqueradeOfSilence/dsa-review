@@ -1,3 +1,5 @@
+import java.util.Objects;
+
 /**
  * Double Linked List
  *
@@ -18,7 +20,24 @@ public class DoubleLinkedList
             next = null;
             previous = null;
         }
+
+        @Override
+        public boolean equals(Object o)
+        {
+            if (this == o) return true;
+            if (o == null || getClass() != o.getClass()) return false;
+            Node node = (Node) o;
+            return value == node.value && Objects.equals(next, node.next) && Objects.equals(previous, node.previous);
+        }
+
+        @Override
+        public int hashCode()
+        {
+            return Objects.hash(value, next, previous);
+        }
     }
+
+
 
     public void insertFront(int data)
     {
@@ -67,7 +86,24 @@ public class DoubleLinkedList
 
     public void deleteNode(Node nodeToDelete)
     {
-
+        if (head == null || nodeToDelete == null)
+        {
+            System.out.println("Nothing to delete");
+            return;
+        }
+        // Deleting front node
+        if (head.equals(nodeToDelete))
+        {
+            head = nodeToDelete.next;
+        }
+        if (nodeToDelete.next != null)
+        {
+            nodeToDelete.next.previous = nodeToDelete.previous;
+        }
+        if (nodeToDelete.previous != null)
+        {
+            nodeToDelete.previous.next = nodeToDelete.next;
+        }
     }
 
     public int getFront()

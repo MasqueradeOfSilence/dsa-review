@@ -56,6 +56,17 @@ class DoubleLinkedListTest
     void deleteNode()
     {
         DoubleLinkedList dll = new DoubleLinkedList();
-        
+        int data1 = 6;
+        int data2 = 1924;
+        int data3 = 666;
+        int data4 = 444;
+        dll.insertFront(data1);
+        dll.insertFront(data2);
+        dll.insertEnd(data4);
+        dll.insertFront(data3);
+        dll.deleteNode(dll.head.next.next);
+        assertEquals(dll.head.value, data3);
+        assertEquals(dll.head.next.value, data2);
+        assertEquals(dll.head.next.next.value, data4);
     }
 }
