@@ -114,4 +114,9 @@ public class DoubleLinkedList
         }
         return head.value;
     }
+
+    public void printDll()
+    {
+
+    }
 }
