@@ -117,6 +117,12 @@ public class DoubleLinkedList
 
     public void printDll()
     {
-
+        Node currentNode = head;
+        while (currentNode != null)
+        {
+            System.out.print(currentNode.value + "->");
+            currentNode = currentNode.next;
+        }
+        System.out.println();
     }
 }
