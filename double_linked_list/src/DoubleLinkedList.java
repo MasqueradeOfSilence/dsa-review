@@ -120,7 +120,11 @@ public class DoubleLinkedList
         Node currentNode = head;
         while (currentNode != null)
         {
-            System.out.print(currentNode.value + "->");
+            System.out.print(currentNode.value);
+            if (currentNode.next != null)
+            {
+                System.out.print("->");
+            }
             currentNode = currentNode.next;
         }
         System.out.println();

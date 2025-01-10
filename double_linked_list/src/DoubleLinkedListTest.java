@@ -69,4 +69,20 @@ class DoubleLinkedListTest
         assertEquals(dll.head.next.value, data2);
         assertEquals(dll.head.next.next.value, data4);
     }
+
+    @org.junit.jupiter.api.Test
+    void printDll()
+    {
+        DoubleLinkedList dll = new DoubleLinkedList();
+        int data1 = 6;
+        int data2 = 1924;
+        int data3 = 666;
+        int data4 = 444;
+        dll.insertFront(data1);
+        dll.insertFront(data2);
+        dll.insertEnd(data4);
+        dll.insertFront(data3);
+        dll.printDll();
+        // Not really anything to assert
+    }
 }
