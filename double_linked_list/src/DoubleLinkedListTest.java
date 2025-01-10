@@ -83,6 +83,6 @@ class DoubleLinkedListTest
         dll.insertEnd(data4);
         dll.insertFront(data3);
         dll.printDll();
-        // Not really anything to assert
+        // Not really anything to assert. Visual verification.
     }
 }
