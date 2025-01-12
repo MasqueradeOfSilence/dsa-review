@@ -2,8 +2,10 @@ import java.util.Objects;
 
 /**
  * Double Linked List
+ * https://www.programiz.com/dsa/doubly-linked-list
  *
- *
+ * Time Complexity: O(n) insertion if traversal necessary; O(1) otherwise. O(1) deletion
+ * Space Complexity: O(1)
  */
 public class DoubleLinkedList
 {
