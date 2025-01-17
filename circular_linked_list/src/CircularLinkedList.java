@@ -8,5 +8,8 @@
 
 public class CircularLinkedList
 {
+    public void insertFront()
+    {
 
+    }
 }
