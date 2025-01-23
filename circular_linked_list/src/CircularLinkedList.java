@@ -37,7 +37,7 @@ public class CircularLinkedList
             return Objects.hash(value, next);
         }
     }
-    public void insertFront()
+    public void insertFront(int value)
     {
 
     }
