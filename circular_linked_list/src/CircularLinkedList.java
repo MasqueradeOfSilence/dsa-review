@@ -41,4 +41,9 @@ public class CircularLinkedList
     {
 
     }
+
+    public void insertAfter(int value)
+    {
+        // Add after the first node found that contains the specified value.
+    }
 }
