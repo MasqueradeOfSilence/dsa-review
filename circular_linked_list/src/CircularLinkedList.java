@@ -12,6 +12,7 @@ import java.util.Objects;
 
 public class CircularLinkedList
 {
+    Node head = null;
     static class Node
     {
         int value;
@@ -37,13 +38,25 @@ public class CircularLinkedList
             return Objects.hash(value, next);
         }
     }
-    public void insertFront(int value)
+    public void insertIntoEmptyList(int value)
     {
 
+    }
+    public void insertFront(int value)
+    {
+        if (head == null)
+        {
+            insertIntoEmptyList(value);
+        }
     }
 
     public void insertAfter(int value)
     {
+        if (head == null)
+        {
+            System.out.println("No value to insert after! Inserting into empty list...");
+            insertIntoEmptyList(value);
+        }
         // Add after the first node found that contains the specified value.
     }
 }

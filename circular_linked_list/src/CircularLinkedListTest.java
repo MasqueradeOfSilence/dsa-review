@@ -11,6 +11,6 @@ class CircularLinkedListTest
     @org.junit.jupiter.api.Test
     void insertAfter()
     {
-        
+
     }
 }
