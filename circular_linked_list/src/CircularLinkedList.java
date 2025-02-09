@@ -13,6 +13,7 @@ import java.util.Objects;
 public class CircularLinkedList
 {
     Node head = null;
+    Node tail = null;
     static class Node
     {
         int value;
@@ -38,10 +39,15 @@ public class CircularLinkedList
             return Objects.hash(value, next);
         }
     }
+
     public void insertIntoEmptyList(int value)
     {
-
+        Node newNode = new Node(value);
+        head = newNode;
+        tail = newNode;
+        tail.next = newNode; // implicitly assigns to head.next
     }
+
     public void insertFront(int value)
     {
         if (head == null)
