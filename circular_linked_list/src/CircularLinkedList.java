@@ -42,6 +42,10 @@ public class CircularLinkedList
 
     public void insertIntoEmptyList(int value)
     {
+        if (tail != null)
+        {
+            
+        }
         Node newNode = new Node(value);
         head = newNode;
         tail = newNode;
