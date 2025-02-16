@@ -44,12 +44,13 @@ public class CircularLinkedList
     {
         if (tail != null)
         {
-            
+            System.out.println("Oops! List is not empty! Returning...");
+            return;
         }
         Node newNode = new Node(value);
         head = newNode;
         tail = newNode;
-        tail.next = newNode; // implicitly assigns to head.next
+        tail.next = newNode; // also implicitly assigns newNode to head.next
     }
 
     public void insertFront(int value)
