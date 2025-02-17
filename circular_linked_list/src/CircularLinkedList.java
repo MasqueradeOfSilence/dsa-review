@@ -12,7 +12,6 @@ import java.util.Objects;
 
 public class CircularLinkedList
 {
-    Node head = null;
     Node tail = null;
     static class Node
     {
@@ -48,22 +47,26 @@ public class CircularLinkedList
             return;
         }
         Node newNode = new Node(value);
-        head = newNode;
         tail = newNode;
-        tail.next = newNode; // also implicitly assigns newNode to head.next
+        tail.next = newNode;
     }
 
     public void insertFront(int value)
     {
-        if (head == null)
+        // programiz's implementation doesn't have a head pointer
+        if (tail == null)
         {
             insertIntoEmptyList(value);
+            return;
         }
+        Node newNode = new Node(value);
+        newNode.next = tail.next;
+        tail.next = newNode;
     }
 
     public void insertAfter(int value)
     {
-        if (head == null)
+        if (tail == null)
         {
             System.out.println("No value to insert after! Inserting into empty list...");
             insertIntoEmptyList(value);
