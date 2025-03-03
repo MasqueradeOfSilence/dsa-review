@@ -54,6 +54,7 @@ public class CircularLinkedList
     public void insertFront(int value)
     {
         // programiz's implementation doesn't have a head pointer
+        // and that's because it's not necessary
         if (tail == null)
         {
             insertIntoEmptyList(value);
@@ -64,13 +65,25 @@ public class CircularLinkedList
         tail.next = newNode;
     }
 
-    public void insertAfter(int value)
+    public void insertAfter(int valueToInsert, int valueToInsertAfter)
     {
         if (tail == null)
         {
             System.out.println("No value to insert after! Inserting into empty list...");
-            insertIntoEmptyList(value);
+            insertIntoEmptyList(valueToInsert);
         }
         // Add after the first node found that contains the specified value.
+        int currentValue = valueToInsert;
+        Node current = tail.next;
+        Node prev = tail;
+        while (currentValue != valueToInsertAfter)
+        {
+            currentValue = current.value;
+            current = current.next;
+            prev = current;
+        }
+        Node newNode = new Node(valueToInsert);
+        prev.next = newNode;
+        newNode.next = current;
     }
 }
