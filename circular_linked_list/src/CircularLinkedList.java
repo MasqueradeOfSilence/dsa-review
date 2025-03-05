@@ -86,4 +86,14 @@ public class CircularLinkedList
         prev.next = newNode;
         newNode.next = current;
     }
+
+    public void insertEnd()
+    {
+        
+    }
+
+    public void deleteNode(int valueOfNodeToDelete)
+    {
+
+    }
 }
