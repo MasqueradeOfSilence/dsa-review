@@ -89,11 +89,21 @@ public class CircularLinkedList
 
     public void insertEnd()
     {
-        
+
     }
 
     public void deleteNode(int valueOfNodeToDelete)
     {
 
+    }
+
+    public Node getTail()
+    {
+        return tail;
+    }
+
+    public Node getHead()
+    {
+        return tail.next;
     }
 }
