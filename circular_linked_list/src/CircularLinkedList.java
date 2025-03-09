@@ -54,7 +54,7 @@ public class CircularLinkedList
     public void insertFront(int value)
     {
         // programiz's implementation doesn't have a head pointer
-        // and that's because it's not necessary
+        // and that's because it's not necessary due to the circular implementation
         if (tail == null)
         {
             insertIntoEmptyList(value);
@@ -65,15 +65,15 @@ public class CircularLinkedList
         tail.next = newNode;
     }
 
-    public void insertAfter(int valueToInsert, int valueToInsertAfter)
+    public void insertAfter(int valueToInsertAfter, int newValue)
     {
         if (tail == null)
         {
             System.out.println("No value to insert after! Inserting into empty list...");
-            insertIntoEmptyList(valueToInsert);
+            insertIntoEmptyList(newValue);
         }
         // Add after the first node found that contains the specified value.
-        int currentValue = valueToInsert;
+        int currentValue = newValue;
         Node current = tail.next;
         Node prev = tail;
         while (currentValue != valueToInsertAfter)
@@ -82,7 +82,7 @@ public class CircularLinkedList
             current = current.next;
             prev = current;
         }
-        Node newNode = new Node(valueToInsert);
+        Node newNode = new Node(newValue);
         prev.next = newNode;
         newNode.next = current;
     }
@@ -105,5 +105,18 @@ public class CircularLinkedList
     public Node getHead()
     {
         return tail.next;
+    }
+
+    public void print()
+    {
+        Node current = getHead();
+        System.out.println("Tail.next value: " + tail.next.value);
+        return;
+//        do
+//        {
+//            System.out.print(current.value + " ");
+//            current = current.next;
+//        }
+//        while(current.value != tail.next.value);
     }
 }

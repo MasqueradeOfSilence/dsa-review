@@ -24,11 +24,20 @@ class CircularLinkedListTest
         CircularLinkedList.Node head = cll.getHead();
         assertEquals(head.value, 67);
         // now run insertAfter
-        cll.insertAfter(333, 1001);
+        cll.insertAfter(1001, 333);
         // now expecting: 67, 1001, 333, 8, 7, 6
-        cll.insertAfter(143, 3);
+        cll.insertAfter(333, 143);
+        // now expecting: 67, 1001, 333, 143, 8, 7, 6
         CircularLinkedList.Node tail = cll.getTail();
-        // TODO the order is wrong for insertAfter
-        // also, I don't think I'm handling tail case correctly, and it might be messing with the tail every time? 
+        cll.print();
+        // also, I don't think I'm handling tail case correctly, and it might be messing with the tail every time?
+        assertEquals(tail.value, 6);
+        assertEquals(tail.next.value, 67);
+        assertEquals(tail.next.next.value, 1001);
+        // TODO debug this...the algo is not computing properly and printing goes infinitely
+        assertEquals(tail.next.next.next.value, 333);
+        assertEquals(tail.next.next.next.next.value, 143);
+        assertEquals(tail.next.next.next.next.next.value, 8);
+        assertEquals(tail.next.next.next.next.next.next.value, 7);
     }
 }
