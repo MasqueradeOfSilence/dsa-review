@@ -111,6 +111,12 @@ public class CircularLinkedList
     {
         Node current = getHead();
         System.out.println("Tail.next value: " + tail.next.value);
+        System.out.println("Tail.next.next value: " + tail.next.next.value);
+        System.out.println(tail.next.next.next.value);
+        System.out.println(tail.next.next.next.next.value);
+        System.out.println(tail.next.next.next.next.next.value);
+        System.out.println(tail.next.next.next.next.next.next.value);
+        System.out.println(tail.next.next.next.next.next.next.next.value);
         return;
 //        do
 //        {
