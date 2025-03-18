@@ -67,6 +67,7 @@ public class CircularLinkedList
 
     public void insertAfter(int valueToInsertAfter, int newValue)
     {
+        System.out.println("insertAfter(" + valueToInsertAfter + ", " + newValue + ")");
         if (tail == null)
         {
             System.out.println("No value to insert after! Inserting into empty list...");
@@ -75,24 +76,23 @@ public class CircularLinkedList
         // Add after the first node found that contains the specified value.
         int currentValue;
         Node current = tail.next;
-        Node prev;
+        Node prev = tail;
         currentValue = current.value;
         while (currentValue != valueToInsertAfter)
         {
             currentValue = current.value;
-            System.out.println("Value: " + currentValue);
-            System.out.println("Comparing to " + valueToInsertAfter);
+            System.out.println("Comparing " + currentValue + " to " + valueToInsertAfter);
             if (currentValue != valueToInsertAfter)
             {
                 current = current.next;
+                prev = current;
             }
 //            prev = current;
         }
-        System.out.println("DONE");
         Node newNode = new Node(newValue);
-        prev = current;
-        prev.next = newNode;
-        newNode.next = current;
+        Node trueNext = current.next;
+        current.next = newNode;
+        newNode.next = trueNext;
         System.out.println("prev val: " + prev.value);
         System.out.println("Current val: " + current.value); // should be 8
     }
