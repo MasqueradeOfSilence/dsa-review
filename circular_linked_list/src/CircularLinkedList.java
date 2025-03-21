@@ -98,7 +98,7 @@ public class CircularLinkedList
             System.out.println("Nothing in list! Inserting into empty list...");
             insertIntoEmptyList(newValue);
         }
-        
+        tail.next = new Node(newValue);
     }
 
     public void deleteNode(int valueOfNodeToDelete)
