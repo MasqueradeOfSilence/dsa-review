@@ -38,4 +38,24 @@ class CircularLinkedListTest
         assertEquals(tail.next.next.next.next.next.next.value, 7);
         cll.print();
     }
+
+    @org.junit.jupiter.api.Test
+    void insertEnd()
+    {
+        CircularLinkedList cll = new CircularLinkedList();
+        cll.insertFront(6);
+        cll.insertFront(7);
+        cll.insertFront(8);
+        cll.insertFront(1001);
+        cll.insertFront(67);
+        // so now the order should be 67, 1001, 8, 7, 6
+        CircularLinkedList.Node head = cll.getHead();
+        assertEquals(head.value, 67);
+        cll.insertEnd(666);
+        cll.insertEnd(8);
+        cll.insertEnd(1924);
+        cll.print();
+        // so now the order should be 67, 1001, 8, 7, 6, 666, 8, 1924
+        assertEquals(head.next.value, 1924);
+    }
 }

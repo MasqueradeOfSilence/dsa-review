@@ -98,10 +98,21 @@ public class CircularLinkedList
             System.out.println("Nothing in list! Inserting into empty list...");
             insertIntoEmptyList(newValue);
         }
+        // you will break the link if you don't grab prev
+        Node current = tail.next;
+        while (current.next != tail)
+        {
+            current = current.next;
+        }
+        Node prevToTail = current;
+        System.out.println(prevToTail.value);
         Node newEnd = new Node(newValue);
-        Node saved = tail.next;
-        tail.next = newEnd;
-        newEnd.next = saved;
+
+        Node prevTail = tail;
+        Node prevHead = tail.next;
+        tail = newEnd;
+        tail.next = prevHead;
+        prevToTail.next = newEnd;
     }
 
     public void deleteNode(int valueOfNodeToDelete)
