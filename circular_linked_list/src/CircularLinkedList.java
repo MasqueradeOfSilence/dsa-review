@@ -105,7 +105,6 @@ public class CircularLinkedList
             current = current.next;
         }
         Node prevToTail = current;
-        System.out.println(prevToTail.value);
         Node newEnd = new Node(newValue);
 
         Node prevTail = tail;
@@ -113,6 +112,8 @@ public class CircularLinkedList
         tail = newEnd;
         tail.next = prevHead;
         prevToTail.next = newEnd;
+        System.out.println("Tail: " + tail.value);
+        System.out.println("Tail next: " + tail.next.value);
     }
 
     public void deleteNode(int valueOfNodeToDelete)

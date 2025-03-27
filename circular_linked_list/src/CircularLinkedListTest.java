@@ -52,10 +52,15 @@ class CircularLinkedListTest
         CircularLinkedList.Node head = cll.getHead();
         assertEquals(head.value, 67);
         cll.insertEnd(666);
+        cll.print();
+        System.out.println();
         cll.insertEnd(8);
+        cll.print();
+        System.out.println();
         cll.insertEnd(1924);
         cll.print();
         // so now the order should be 67, 1001, 8, 7, 6, 666, 8, 1924
+        // current bug -- the new ones are overwriting.
         assertEquals(head.next.value, 1924);
     }
 }
