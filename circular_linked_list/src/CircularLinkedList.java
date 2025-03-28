@@ -104,14 +104,15 @@ public class CircularLinkedList
         {
             current = current.next;
         }
-        Node prevToTail = current;
+        Node prevToTail = current.next;
+        Node prevTail = tail;
         Node newEnd = new Node(newValue);
 
-        Node prevTail = tail;
         Node prevHead = tail.next;
         tail = newEnd;
         tail.next = prevHead;
         prevToTail.next = newEnd;
+        System.out.println("Prev to tail: " + prevToTail.value);
         System.out.println("Tail: " + tail.value);
         System.out.println("Tail next: " + tail.next.value);
     }
