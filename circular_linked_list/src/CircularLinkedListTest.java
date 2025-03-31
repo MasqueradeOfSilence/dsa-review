@@ -60,8 +60,6 @@ class CircularLinkedListTest
         cll.insertEnd(1924);
         cll.print();
         // so now the order should be 67, 1001, 8, 7, 6, 666, 8, 1924
-        // current bug -- the new ones are overwriting.
-        // the tail and tail.next are correct, but the previous tail is vanishing
         CircularLinkedList.Node tail = cll.getTail();
         assertEquals(tail.value, 1924);
         assertEquals(tail.next.value, 67);
