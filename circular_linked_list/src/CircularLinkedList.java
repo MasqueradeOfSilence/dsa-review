@@ -115,7 +115,12 @@ public class CircularLinkedList
 
     public void deleteNode(int valueOfNodeToDelete)
     {
-
+        if (tail == null)
+        {
+            System.out.println("Nothing to delete!");
+            return;
+        }
+        Node temp = tail;
     }
 
     public Node getTail()
