@@ -121,10 +121,12 @@ public class CircularLinkedList
             return;
         }
         Node temp = tail;
-        while (temp.value != valueOfNodeToDelete)
+        do
         {
             temp = temp.next;
         }
+        while (temp.value != valueOfNodeToDelete);
+        // Now, temp is equal to
     }
 
     public Node getTail()
