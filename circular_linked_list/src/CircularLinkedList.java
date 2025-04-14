@@ -126,7 +126,7 @@ public class CircularLinkedList
             temp = temp.next;
         }
         while (temp.value != valueOfNodeToDelete);
-        // Now, temp is equal to
+        // Now, temp is pointing to the node we want to delete (assuming unique values)
     }
 
     public Node getTail()
