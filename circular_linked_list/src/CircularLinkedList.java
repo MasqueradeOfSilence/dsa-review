@@ -127,6 +127,7 @@ public class CircularLinkedList
         }
         while (temp.value != valueOfNodeToDelete);
         // Now, temp is pointing to the node we want to delete (assuming unique values)
+        // So detach the previous and reattach it to the next. Thus orphaning the node to delete
     }
 
     public Node getTail()
