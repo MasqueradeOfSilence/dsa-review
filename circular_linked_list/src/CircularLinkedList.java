@@ -121,13 +121,19 @@ public class CircularLinkedList
             return;
         }
         Node temp = tail;
+        Node prev;
         do
         {
+            prev = temp;
             temp = temp.next;
         }
         while (temp.value != valueOfNodeToDelete);
         // Now, temp is pointing to the node we want to delete (assuming unique values)
         // So detach the previous and reattach it to the next. Thus orphaning the node to delete
+        if (prev.value != temp.value)
+        {
+            
+        }
     }
 
     public Node getTail()
