@@ -132,7 +132,7 @@ public class CircularLinkedList
         // So detach the previous and reattach it to the next. Thus orphaning the node to delete
         if (prev.value != temp.value)
         {
-            
+            prev.next = temp.next;
         }
     }
 

@@ -64,4 +64,18 @@ class CircularLinkedListTest
         assertEquals(tail.value, 1924);
         assertEquals(tail.next.value, 67);
     }
+
+    @org.junit.jupiter.api.Test
+    void deleteNode()
+    {
+        CircularLinkedList cll = new CircularLinkedList();
+        cll.insertFront(6);
+        cll.insertFront(7);
+        cll.insertFront(8);
+        cll.insertFront(1001);
+        cll.insertFront(67);
+        // so now the order should be 67, 1001, 8, 7, 6
+        // test deletion: at both ends, at various center positions 
+        cll.deleteNode(8);
+    }
 }
