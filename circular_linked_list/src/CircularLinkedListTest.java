@@ -75,7 +75,12 @@ class CircularLinkedListTest
         cll.insertFront(1001);
         cll.insertFront(67);
         // so now the order should be 67, 1001, 8, 7, 6
-        // test deletion: at both ends, at various center positions 
+        // test deletion: at both ends, at various center positions
         cll.deleteNode(8);
+        // now: 67, 1001, 7, 6
+        cll.print();
+        cll.deleteNode(67);
+        // now: 1001, 7, 6
+        cll.print();
     }
 }

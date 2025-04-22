@@ -155,5 +155,6 @@ public class CircularLinkedList
             current = current.next;
         }
         while(current.value != tail.next.value);
+        System.out.println();
     }
 }
