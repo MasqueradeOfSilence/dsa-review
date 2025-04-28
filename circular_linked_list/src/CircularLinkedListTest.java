@@ -87,5 +87,11 @@ class CircularLinkedListTest
         // Now, 1001, 7, 6, 1924, 666
         cll.print();
         // now test both-end deletion
+        cll.deleteNode(1001);
+        // Now, 7, 6, 1924, 666
+        cll.print();
+        cll.deleteNode(666);
+        // Now: 7, 6, 1924
+        cll.print();
     }
 }
