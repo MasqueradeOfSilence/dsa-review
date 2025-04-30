@@ -7,6 +7,7 @@
       <module fileurl="file://$PROJECT_DIR$/deque/deque.iml" filepath="$PROJECT_DIR$/deque/deque.iml" />
       <module fileurl="file://$PROJECT_DIR$/double_linked_list/double_linked_list.iml" filepath="$PROJECT_DIR$/double_linked_list/double_linked_list.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/dsa-review.iml" filepath="$PROJECT_DIR$/.idea/dsa-review.iml" />
+      <module fileurl="file://$PROJECT_DIR$/hash_table/hash_table.iml" filepath="$PROJECT_DIR$/hash_table/hash_table.iml" />
       <module fileurl="file://$PROJECT_DIR$/linked_list/linked_list.iml" filepath="$PROJECT_DIR$/linked_list/linked_list.iml" />
       <module fileurl="file://$PROJECT_DIR$/priority_queue/priority_queue.iml" filepath="$PROJECT_DIR$/priority_queue/priority_queue.iml" />
       <module fileurl="file://$PROJECT_DIR$/queue/queue.iml" filepath="$PROJECT_DIR$/queue/queue.iml" />
