@@ -6,8 +6,8 @@ import java.util.Objects;
  *
  * Here we are implementing a singly circularly linked list.
  *
- * Time Complexity:
- * Space Complexity:
+ * Time Complexity: O(n) insertion; O(1) deletion
+ * Space Complexity: O(1) for both deletion and insertion
  */
 
 public class CircularLinkedList
