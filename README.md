@@ -9,6 +9,11 @@ reviewing and recoding common DS&amp;A
   - (list here from Programiz, and link an MD for each that is within this repo TODO)
 
 ## Q&A
+- What is the definition of an algorithm? 
+  - An **algorithm** is a series of actions taken in order to execute a task. 
+  - It takes *in* input, and *produces* output. 
+- What is the definition of a data structure? 
+  - A **data structure** is an abstract container that houses and organizes data. 
 - What is the difference between a linear and non-linear data structure?
   - A linear data structure is one in which data is structured in a sequential order, similar to a line. 
   - In non-linear data structures, data is not sequential. Instead, it is either hierarchical (tree-like) or associative (map-like). 
