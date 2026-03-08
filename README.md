@@ -17,3 +17,5 @@ reviewing and recoding common DS&amp;A
 - What is the difference between a linear and non-linear data structure?
   - A linear data structure is one in which data is structured in a sequential order, similar to a line. 
   - In non-linear data structures, data is not sequential. Instead, it is either hierarchical (tree-like) or associative (map-like). 
+- What is asymptotic analysis?
+  - It is defined as the study of how an algorithm's performance changes based on the size of the input.
