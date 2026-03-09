@@ -19,3 +19,4 @@ reviewing and recoding common DS&amp;A
   - In non-linear data structures, data is not sequential. Instead, it is either hierarchical (tree-like) or associative (map-like). 
 - What is asymptotic analysis?
   - It is defined as the study of how an algorithm's performance changes based on the size of the input.
+- What is the master theorem? 
