@@ -19,4 +19,13 @@ reviewing and recoding common DS&amp;A
   - In non-linear data structures, data is not sequential. Instead, it is either hierarchical (tree-like) or associative (map-like). 
 - What is asymptotic analysis?
   - It is defined as the study of how an algorithm's performance changes based on the size of the input.
+  - Define Big-O Notation:
+    - Big-O Notation is the upper-bound, AKA worst-case analysis of an algorithm. 
+  - Define Omega Notation (Ω):
+    - Omega Notation represents the lower bound, AKA best-case analysis of an algorithm. 
+  - Define Theta Notation (Θ):
+    - Theta Notation represents the average-case analysis of an algorithm. We can visualize two lines on either side of 
+     the function, an upper and lower bound, which the function graph will eventually settle between (though it may go 
+     above/below at first, since it's more about what it settles into.)
 - What is the master theorem? 
+  - The master theorem is defined as 
