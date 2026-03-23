@@ -28,4 +28,5 @@ reviewing and recoding common DS&amp;A
      the function, an upper and lower bound, which the function graph will eventually settle between (though it may go 
      above/below at first, since it's more about what it settles into.)
 - What is the master theorem? 
-  - The master theorem is defined as 
+  - The master theorem describes the complexity of divide-and-conquer algorithms. 
+    - A divide and conquer algorithm is 
