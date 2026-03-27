@@ -29,4 +29,5 @@ reviewing and recoding common DS&amp;A
      above/below at first, since it's more about what it settles into.)
 - What is the master theorem? 
   - The master theorem describes the complexity of divide-and-conquer algorithms. 
-    - A divide and conquer algorithm is 
+    - A divide and conquer algorithm is an algorithm that can be solved by dividing it into multiple subproblems, 
+     solving each, and combining the result.
