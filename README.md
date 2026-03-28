@@ -32,3 +32,7 @@ reviewing and recoding common DS&amp;A
     - A divide and conquer algorithm is an algorithm that can be solved by dividing it into multiple subproblems, 
      solving each, and combining the result.
   - The end result of the master theorem is the algorithm's Big-O.
+    - It does this by solving 3 questions:
+      1. How many subproblems?
+      2. How big is each subproblem?
+      3. How much work is there to combine?
