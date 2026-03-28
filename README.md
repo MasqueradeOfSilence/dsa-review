@@ -31,3 +31,4 @@ reviewing and recoding common DS&amp;A
   - The master theorem describes the complexity of divide-and-conquer algorithms. 
     - A divide and conquer algorithm is an algorithm that can be solved by dividing it into multiple subproblems, 
      solving each, and combining the result.
+  - The end result of the master theorem is the algorithm's Big-O.
