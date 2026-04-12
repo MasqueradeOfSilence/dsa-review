@@ -36,3 +36,4 @@ reviewing and recoding common DS&amp;A
       1. How many subproblems?
       2. How big is each subproblem?
       3. How much work is there to combine?
+  - Mathematical Definition:
